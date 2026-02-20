@@ -1,0 +1,7 @@
+.btn-tab-list {
+  @apply bg-white hover:bg-primary-light hover:shadow-neomorphism-top-left hover:text-white transition-all;
+
+  &.active {
+    @apply bg-primary-light shadow-neomorphism-top-left text-white;
+  }
+}

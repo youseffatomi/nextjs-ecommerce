@@ -1,0 +1,29 @@
+<section class="bg-primary-dark overflow-hidden">
+  <div class="container relative py-7">
+    <img
+      src="/assets/images/product-carousel-shape.svg"
+      class="absolute z-[1] top-0 right-[-30px] md:right-[-100px] w-[400px] md:w-[500px] lg:right-[-200px] lg:w-[600px]"
+      draggable="false"
+    />
+    <img
+      src="/assets/images/product-carousel-shape2.svg"
+      class="absolute z-[1] bottom-0 left-[-200px] w-[400px]"
+      draggable="false"
+    />
+    <h2 class="font-bold text-3xl text-white relative z-20">تخفیفات روز</h2>
+    <div class="white-box overflow-hidden">
+      <div class="title !justify-end">
+        <a href="#" class="see-all !text-black mt-3">
+          <span> مشاهده همه </span>
+          <i class="icon-arrow-left"></i>
+        </a>
+      </div>
+      <div class="white-box-content">
+        <div class="owl-carousel owl-theme product-off-carousel">
+          <% [0,0,0,0,0,0,0,0,0,0,0].forEach(e=>{%> <%-
+          include("./product-box",{off:true}) %> <%}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+.short-details-product {
+  @apply flex flex-wrap items-center gap-1;
+
+  &-icon {
+    @apply w-[30px];
+  }
+  &-title {
+    @apply font-medium lg:text-lg;
+  }
+  &-des {
+    @apply lg:text-lg;
+  }
+}

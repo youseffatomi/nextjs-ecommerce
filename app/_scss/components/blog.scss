@@ -1,0 +1,46 @@
+.blog-carousel {
+  .owl-dots {
+    @apply absolute bottom-[30px] right-[50px];
+    button {
+      span {
+        width: 20px !important;
+        height: 5px !important;
+        background-color: #e3ecfa4d !important;
+
+        @media screen and (min-width: 768px) {
+          width: 40px !important;
+          height: 5px !important;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 50px !important;
+          height: 5px !important;
+        }
+      }
+
+      &.active {
+        span {
+          background-color: white !important;
+        }
+      }
+    }
+  }
+}
+
+.blog-menu-bar-list {
+  li {
+    a {
+      @apply border-2 border-solid border-transparent;
+    }
+    &.active {
+      a {
+        @apply border-b-primary-light;
+      }
+    }
+  }
+}
+
+.blog-carousel2 {
+  .owl-dots {
+    @apply absolute bottom-2 left-5;
+  }
+}

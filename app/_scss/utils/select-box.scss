@@ -1,0 +1,57 @@
+.custom-select-container {
+  @apply w-full;
+}
+.custom-select-container {
+  .custom-select-panel {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  &.is-open {
+    .custom-select-panel {
+      max-height: 400px !important;
+    }
+  }
+
+  .custom-select-opener {
+    @apply flex w-full items-center justify-between rounded-lg bg-white px-3 text-base transition-all duration-300;
+    &[aria-expanded="true"] {
+      @apply bg-primary-light rounded-b-none text-white;
+      &::after {
+        @apply rotate-180;
+        filter: invert(100%);
+      }
+    }
+
+    &::after {
+      content: url("/assets/images/icons/arrow-down-solid.svg");
+      transition: all 0.3s;
+    }
+  }
+  .custom-select-panel {
+    @apply bg-primary-light top-[90%] rounded-b-lg px-2 text-sm text-white duration-300;
+    .custom-select-option {
+      @apply border-t-2 border-white py-2;
+      &:first-child {
+        @apply mt-1;
+      }
+      &:last-child {
+        @apply mb-1;
+      }
+      &:hover,
+      &.has-focus {
+        @apply text-primary-main bg-transparent transition-all;
+      }
+
+      &.is-selected {
+        @apply bg-primary-light;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

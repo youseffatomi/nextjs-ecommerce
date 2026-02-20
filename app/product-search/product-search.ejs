@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../components/layout/head") %>
+  <body>
+    <%- include("./../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <!--  -->
+            <div class="flex flex-wrap items-center mt-6 gap-2 text-sm">
+              <a href="#" class="text-primary-light">فروشگاه اینترنتی لومکس</a>
+              <i class="icon-arrow-left"></i>
+              <a href="#" class="text-primary-light">فروشگاه اینترنتی لومکس</a>
+              <i class="icon-arrow-left"></i>
+              <span>فروشگاه اینترنتی لومکس</span>
+            </div>
+            <!--  -->
+            <div class="line-gradient"></div>
+            <!--  -->
+            <section
+              class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-3"
+            >
+              <aside>
+                <div class="blue-box">
+                  <div class="blue-box-content !overflow-visible">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img
+                          src="/assets/images/icons/filter.svg"
+                          class="w-[25px]"
+                          alt=""
+                        />
+                        <span class="font-medium">فیلترها</span>
+                      </div>
+
+                      <button class="btn-main text-primary-main font-medium">
+                        حذف فیلتر ها
+                      </button>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-4">
+                      <!--  -->
+                      <div class="accordion">
+                        <button title>برند</button>
+                        <div content-box>
+                          <div content>
+                            <div class="text-lg">
+                              <div
+                                class="blue-box border-2 border-stroke border-solid py-1 px-2 flex items-center gap-2"
+                              >
+                                <img
+                                  src="/assets/images/icons/search-status.svg"
+                                  alt="#"
+                                />
+                                <div>
+                                  <input
+                                    type="text"
+                                    placeholder="جستجو در برند"
+                                    class="flex-grow bg-transparent text-lg w-full"
+                                  />
+                                </div>
+                              </div>
+                              <div class="flex flex-col gap-3 mt-5">
+                                <% [0,0,0,0,0].forEach(e=>{%>
+
+                                <div class="flex items gap-3">
+                                  <div>
+                                    <input
+                                      type="checkbox"
+                                      name=""
+                                      class="icheck ml-2 inline-block"
+                                    />
+                                  </div>
+                                  سامسونگ
+                                </div>
+                                <%}) %>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="accordion">
+                        <button title>کارت حافظه</button>
+                        <div content-box>
+                          <div content>
+                            <div class="text-lg">
+                              <div class="flex flex-col gap-3">
+                                <% [0,0,0,0,0].forEach(e=>{%>
+
+                                <div class="flex items gap-3">
+                                  <div>
+                                    <input
+                                      type="checkbox"
+                                      name=""
+                                      class="icheck ml-2 inline-block"
+                                    />
+                                  </div>
+                                  128gb
+                                </div>
+                                <%}) %>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="accordion">
+                        <button title>رنگ ها</button>
+                        <div content-box>
+                          <div content>
+                            <div class="text-lg">
+                              <div
+                                class="blue-box border-2 border-stroke border-solid py-1 px-2 flex items-center gap-2"
+                              >
+                                <img
+                                  src="/assets/images/icons/search-status.svg"
+                                  alt="#"
+                                />
+                                <div>
+                                  <input
+                                    type="text"
+                                    placeholder="جستجو در برند"
+                                    class="flex-grow bg-transparent text-lg w-full"
+                                  />
+                                </div>
+                              </div>
+                              <div class="flex flex-col gap-3 mt-5">
+                                <% [0,0,0,0,0].forEach(e=>{%>
+                                <div class="flex items-center justify-between">
+                                  <div class="flex items gap-3">
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        name=""
+                                        class="icheck ml-2 inline-block"
+                                      />
+                                    </div>
+                                    سامسونگ
+                                  </div>
+                                  <button class="select-color-btn">
+                                    <div style="background-color: black"></div>
+                                    <div
+                                      style="background-color: rgb(80, 79, 79)"
+                                    ></div>
+                                  </button>
+                                </div>
+                                <%}) %>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="accordion">
+                        <button title>محدوده قیمت</button>
+                        <div content-box>
+                          <div content>
+                            <div class="price-range">
+                              <div class="price text-violet">
+                                <div
+                                  class="mb-3 blue-box overflow-hidden !rounded-md border-2 border-stroke border-solid flex items-stretch"
+                                >
+                                  <span class="bg-primary-light text-white p-2">
+                                    تومان
+                                  </span>
+
+                                  <div
+                                    class="flex items-center justify-between p-2 flex-grow"
+                                  >
+                                    <div>
+                                      <input
+                                        id="from"
+                                        class="flex-grow bg-transparent w-full"
+                                      />
+                                    </div>
+                                    <span>از</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="mb-5 blue-box overflow-hidden !rounded-md border-2 border-stroke border-solid flex items-stretch"
+                                >
+                                  <span class="bg-primary-light text-white p-2">
+                                    تومان
+                                  </span>
+
+                                  <div
+                                    class="flex items-center justify-between p-2 flex-grow"
+                                  >
+                                    <div>
+                                      <input
+                                        id="to"
+                                        class="flex-grow bg-transparent w-full"
+                                      />
+                                    </div>
+                                    <span>تا</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                id="price-range-container"
+                                max="58000000"
+                                min="0"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="accordion">
+                        <div class="flex items-center justify-between p-2">
+                          <span>فقط موجودی ها</span>
+                          <div class="btn-toggle">
+                            <input type="checkbox" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="btn-larg bg-primary-main text-white">
+                        اعمال فیلتر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <article class="lg:col-span-2 xl:col-span-4 mt-20 md:mt-0">
+                <section class="mb-3">
+                  <div
+                    class="blue-box flex flex-col md:flex-row items-stretch overflow-hidden"
+                  >
+                    <div
+                      class="p-3 gap-2 min-w-[150px] font-medium text-base bg-primary-main text-white flex items-center"
+                    >
+                      <img
+                        src="/assets/images/icons/descending_sorting.svg"
+                        alt="x"
+                      />
+                      <span>مرتب سازی :</span>
+                    </div>
+                    <div
+                      class="py-2 px-3 flex flex-col md:flex-row md:items-center gap-3"
+                    >
+                      <button class="btn-main bg-white btn-hover">
+                        پرفروش ترین
+                      </button>
+                      <button class="btn-main bg-white btn-hover">
+                        پر بازدید ترین
+                      </button>
+                      <button class="btn-main bg-white btn-hover">
+                        جدیدترین
+                      </button>
+                    </div>
+                  </div>
+                </section>
+                <div class="blue-box">
+                  <div class="blue-box-content overflow-hidden relative">
+                    <div class="shap-bg">
+                      <img
+                        src="/assets/images/product-search/shape.svg"
+                        class="blur-[10px] absolute top-0 lg:top-[9%] left-[95%] translate-x-[-50%] translate-y-[-50%] rotate-[218deg]"
+                        alt="bg"
+                      />
+                      <img
+                        src="/assets/images/product-search/shape.svg"
+                        class="blur-[10px] absolute top-[50%] left-[24%] translate-x-[-50%] translate-y-[-50%]"
+                        alt="bg"
+                      />
+                      <img
+                        src="/assets/images/product-search/shape.svg"
+                        class="blur-[10px] absolute top-[95%] left-[10%] translate-x-[-50%] translate-y-[-50%] rotate-[242deg]"
+                        alt="bg"
+                      />
+                    </div>
+
+                    <section
+                      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4"
+                    >
+                      <% [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0].forEach(e=>{%> <%-
+                      include("./../components/product-box",{off:false}) %> <%})
+                      %>
+                    </section>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <!-- -->
+
+            <%- include("./../components/pagination.ejs") %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../components/layout/footer.ejs") %>
+  </body>
+</html>

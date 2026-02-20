@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <%- include("./../../components/blog/menu-bar") %>
+
+            <div
+              class="mt-5 grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-8 gap-5 items-start"
+            >
+              <article class="blue-box lg:col-span-3 xl:col-span-6">
+                <div class="blue-box-content">
+                  <div class="white-box">
+                    <div class="white-box-content">
+                      <span class="text-lg block mb-3"> 1400/02/10 </span>
+
+                      <div
+                        class="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between my-5"
+                      >
+                        <h1 class="text-lg">
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است لورم ایپسوم متن
+                          ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+                          از طراحان گرافیک است
+                        </h1>
+
+                        <div
+                          class="flex items-center justify-center xl:justify-end gap-2 xl:min-w-[300px]"
+                        >
+                          <span class="text-slate-500"
+                            >این رو دوست داری بعدا ببینی؟</span
+                          >
+                          <button>
+                            <img
+                              src="/assets/images/icons/archive.svg"
+                              alt="x"
+                            />
+                          </button>
+                          <button class="hidden">
+                            <img
+                              src="/assets/images/icons/archive-active.svg"
+                              alt="x"
+                            />
+                          </button>
+                          <span
+                            class="block w-[2px] min-h-[30px] bg-black"
+                          ></span>
+                          <button>
+                            <img src="/assets/images/icons/shere.svg" alt="x" />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum? Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Aperiam eum sint facilis quaerat laborum quia expedita?
+                        Sequi cum voluptatum beatae tempore aspernatur dolorem,
+                        mollitia et maxime sint assumenda maiores earum?
+                      </div>
+
+                      <div class="mt-5 flex flex-wrap gap-3">
+                        <% [0,0,0,0].forEach(()=>{ %>
+                        <a class="block bg-body p-3 text-sm rounded-lg">
+                          #سامسونگ
+                        </a>
+                        <% }) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <%- include("./../../components/blog/related-posts")%>
+            </div>
+
+            <%- include("./../../components/pagination")%>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

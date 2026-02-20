@@ -1,0 +1,383 @@
+<div class="white-box">
+  <div class="white-box-content">
+    <div class="min-h-[100px]">
+      <div
+        class="bg-primary-light flex items-center justify-center gap-3 rounded-b-xl w-[250px] md:w-[170px] xl:w-[230px] mx-auto md:ml-auto md:mr-0 py-4 px-3 text-xl md:text-base xl:text-xl text-white text-center"
+      >
+        <span>فروش ویژه </span>
+        <span>23:10:14</span>
+      </div>
+    </div>
+    <!-- ========== -->
+    <div class="flex flex-wrap items-center mt-6 gap-2 text-sm">
+      <a href="#" class="text-primary-light">فروشگاه اینترنتی لومکس</a>
+      <i class="icon-arrow-left"></i>
+      <a href="#" class="text-primary-light">فروشگاه اینترنتی لومکس</a>
+      <i class="icon-arrow-left"></i>
+      <span>فروشگاه اینترنتی لومکس</span>
+    </div>
+
+    <div class="line-gradient"></div>
+
+    <!-- ========== -->
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 xl:items-stretch"
+    >
+      <div class="product-img">
+        <div
+          class="product-img-big product-img-big-first product-img-show-more"
+        >
+          <img src="/assets/images/11tpro-black-1.png" />
+          <div class="zoom">
+            <img src="/assets/images/icons/search-zoom-in.svg" />
+            <span>بزرگ نمایی</span>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-4 lg:grid-cols-1 lg:grid-rows-4 gap-1 sm:gap-3 lg:gap-2 md:w-8/12 lg:w-auto"
+        >
+          <%
+          ["/assets/images/11tpro-black-1.png","/assets/images/Hu40.png","/assets/images/11tpro-black-1.png"].forEach((e,index)=>{%>
+
+          <button
+            class="product-img-thumb first <%= index === 0 ? 'active' :'' %>"
+          >
+            <img src="<%= e %> " alt="x" />
+          </button>
+
+          <%}) %>
+
+          <button class="product-img-thumb product-img-show-more">
+            <img
+              src="/assets/images/11tpro-black-1.png"
+              alt="x"
+              class="h-full"
+            />
+          </button>
+        </div>
+
+        <!-- modal -->
+
+        <div class="product-image-modal hidden">
+          <div class="grid place-items-center h-full">
+            <div class="container overflow-hidden">
+              <button
+                class="absolute top-[50px] right-[25px] md:right-[50px] lg:right-[75px] xl:right-[400px] product-img-close-more"
+              >
+                <img
+                  src="/assets/images/icons/close-circle-white.svg"
+                  alt="x"
+                  class="w-[30px]"
+                />
+              </button>
+
+              <!-- ===== -->
+
+              <div class="product-img-big mx-auto product-img-big-more">
+                <img src="/assets/images/Hu40.png" />
+              </div>
+              <br />
+
+              <div class="mx-auto sm:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
+                <div
+                  class="owl-carousel owl-theme product-img-more-carousel w-full"
+                >
+                  <%
+                  ["/assets/images/11tpro-black-1.png","/assets/images/Hu40.png","/assets/images/11tpro-black-1.png","/assets/images/Hu40.png","/assets/images/11tpro-black-1.png","/assets/images/Hu40.png","/assets/images/11tpro-black-1.png","/assets/images/Hu40.png"].forEach((e,index)=>{%>
+
+                  <button class="product-img-thumb more mx-auto">
+                    <img src="<%= e %> " alt="x" class="h-full" />
+                  </button>
+
+                  <%}) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===============-->
+      <div>
+        <div class="blue-box h-full">
+          <div class="blue-box-content">
+            <div class="select-color mb-3">
+              <div class="bg-primary-main flex items-center gap-3 py-2 px-2">
+                <img src="/assets/images/icons/colors-square.svg" alt="" />
+                <span class="text-white"> انتخاب رنگ </span>
+              </div>
+
+              <div class="select-color-btns">
+                <button class="active select-color-btn">
+                  <div style="background-color: black"></div>
+                  <div style="background-color: rgb(80, 79, 79)"></div>
+                </button>
+                <button class="select-color-btn">
+                  <div style="background-color: rgb(163, 27, 27)"></div>
+                  <div style="background-color: rgb(131, 9, 9)"></div>
+                </button>
+                <button class="select-color-btn">
+                  <div style="background-color: rgb(6, 145, 29)"></div>
+                  <div style="background-color: rgb(92, 223, 59)"></div>
+                </button>
+              </div>
+            </div>
+
+            <div class="white-box">
+              <div
+                class="white-box-content flex flex-col gap-5 text-sm sm:text-base"
+              >
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/cpu-charge.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">پردازنده:</span>
+                  <span class="short-details-product-des"
+                    >کوالکام اسنپ دراگون 888</span
+                  >
+                </div>
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/cpu-charge.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">پردازنده:</span>
+                  <span class="short-details-product-des"
+                    >کوالکام اسنپ دراگون 888</span
+                  >
+                </div>
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/ram.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">حافظه داخلی:</span>
+                  <span class="short-details-product-des">256 گیگابایت</span>
+                </div>
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/ram-2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">حافظه رم:</span>
+                  <span class="short-details-product-des">6 گیگابایت</span>
+                </div>
+
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/monitor.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title"
+                    >اندازه صفحه نمایش:</span
+                  >
+                  <span class="short-details-product-des">6.68 اینچ</span>
+                </div>
+
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/slr_camera 2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">دوربین اصلی:</span>
+                  <span class="short-details-product-des"
+                    >سه گانه 108+8+5 مگاپیکسل</span
+                  >
+                </div>
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/mobile-camera 2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">دوربین سلفی:</span>
+                  <span class="short-details-product-des"
+                    >16 مگاپیکسل در صفحه نمایش</span
+                  >
+                </div>
+                <div class="short-details-product">
+                  <div class="short-details-product-icon">
+                    <img
+                      src="/assets/images/icons/product-details/simcard.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="short-details-product-title">نوع سیم کارت:</span>
+                  <span class="short-details-product-des">2 سیم کارت</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===============-->
+
+      <div class="lg:col-span-2 xl:col-span-1">
+        <div class="blue-box h-full flex flex-col justify-start">
+          <div
+            class="bg-primary-dark py-3 px-2 md:px-4 flex items-center text-white gap-2 lg:gap-4"
+          >
+            <div class="flex items-center gap-2">
+              <img src="/assets/images/icons/star.svg" alt="" />
+              <span class="text-base md:text-lg lg:text-xl">4.1</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="/assets/images/icons/message-text.svg" alt="" />
+              <span class="text-base md:text-lg lg:text-xl">210</span>
+            </div>
+          </div>
+          <!--===============-->
+          <div class="blue-box-content h-full flex-grow">
+            <div class="flex flex-col justify-between h-full">
+              <div>
+                <div class="lg:grid grid-cols-2 gap-5 items-center xl:block">
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <button
+                      class="flex items-center justify-center gap-1 bg-white py-3 px-2 rounded-md hover:bg-primary-light transition-all"
+                    >
+                      <img
+                        src="/assets/images/icons/product-price-box/scale-2.svg"
+                        alt=""
+                      />
+                      <span class="text-base">مقایسه</span>
+                    </button>
+                    <button
+                      class="flex items-center justify-center gap-1 bg-white py-3 px-2 rounded-md hover:bg-primary-light transition-all"
+                    >
+                      <img
+                        src="/assets/images/icons/product-price-box/notification-bing.svg"
+                        alt=""
+                      />
+                      <span class="text-base">خبرم کن</span>
+                    </button>
+                    <button
+                      class="flex items-center justify-center gap-1 bg-white py-3 px-2 rounded-md hover:bg-primary-light transition-all"
+                    >
+                      <img
+                        src="/assets/images/icons/product-price-box/heart-tick.svg"
+                        alt=""
+                      />
+                      <span class="text-base">علاقه مندم</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="bg-white flex items-stretch my-3 gap-2 rounded-md"
+                  >
+                    <div
+                      class="py-2 px-1 sm:px-3 flex items-center gap-2 bg-primary-light text-white"
+                    >
+                      <img
+                        src="/assets/images/icons/product-price-box/shield-tick.svg"
+                        alt=""
+                      />
+                      <span class="text-base md:text-lg lg:text-xl min-w-[80px]"
+                        >گارانتی</span
+                      >
+                    </div>
+                    <div class="flex items-center px-2">
+                      <span> زرین فناوران </span>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="block text-green-500 text-[16px] my-5">
+                  شما با خرید این محصول 30 امتیاز دیافت میکنید
+                </span>
+              </div>
+
+              <div>
+                <div class="text-left my-7 xl:my-3">
+                  <del class="text-gray block">
+                    <span> 13,900,000 </span>
+
+                    <span> تومان</span>
+                  </del>
+                  <span class="text-3xl text-black block mt-5 font-[500]">
+                    <span> 13,900,000 </span>
+
+                    <span> تومان</span>
+                  </span>
+                </div>
+
+                <div id="addToCart" class="">
+                  <button
+                    class="flex btn-larg text-white w-full !py-3 !bg-primary-dark !rounded-lg !flexx items-center justify-center gap-3"
+                  >
+                    <img
+                      src="/assets/images/icons/product-price-box/add-square.svg"
+                      alt=""
+                    />
+                    <span> اضافه کردن به سبد خرید </span>
+                  </button>
+                </div>
+
+                <div id="loading" class="hidden">
+                  <div
+                    class="btn-larg text-white w-full !py-3 !bg-primary-dark !rounded-lg !flexx items-center justify-center gap-3"
+                  >
+                    <img
+                      src="/assets/images/loading.png"
+                      class="animate-spin w-[30px]"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div id="goToCheckout" class="hidden">
+                  <div
+                    class="flex items-center justify-center flex-col sm:flex-row sm:justify-between gap-5"
+                  >
+                    <div class="counter bg-white rounded-lg">
+                      <button add="" class="btn-small text-primary-light">
+                        <i class="icon-add-square"></i>
+                      </button>
+
+                      <input type="number" disabled="" value="2" />
+                      <span>عدد</span>
+                      <button
+                        remove=""
+                        class="btn-small text-primary-light !max-w-[50px]"
+                      >
+                        <img
+                          src="/assets/images/icons/trash.svg"
+                          class=""
+                          alt=""
+                        />
+                      </button>
+                    </div>
+
+                    <a
+                      href="/checkout.html"
+                      class="btn-main btn-hover bg-primary-dark text-white"
+                    >
+                      <i class="icon-bag-tick text-white"></i>
+
+                      <span> مشاهده سبد خرید </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===============-->
+    </div>
+  </div>
+</div>

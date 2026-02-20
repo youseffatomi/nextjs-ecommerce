@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../../../components/layout/head") %>
+  <body>
+    <%- include("./../../../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">ثبت درخواست مرجوعی</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <div class="blue-box mb-5">
+                  <div class="blue-box-content">
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <p>
+                          درخواست مرجوعی شما با کد پیگیری مرجوعی ها به شماره
+                          7745 ثبت و پس از بررسی همکاران ما نتیجه به شما اطلاع
+                          داده خواهد شد
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-col md:flex-row md:items-center md:justify-end gap-5"
+                    >
+                      <a
+                        href="/pages/profile/sefareshHa/marjoee.html"
+                        class="btn-main bg-primary-light text-white md:min-w-[120px] hover:shadow-neomorphism-top-left"
+                        >بازگشت</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <%- include("./../../../../components/pagination") %>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../../../components/layout/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+.mobile-menu {
+  transition: all 0.3s;
+  &.active {
+    @apply right-0;
+  }
+}
+.mobile-category {
+  @apply pt-3;
+  .arrow-text {
+    @apply flex items-center gap-1;
+  }
+  & > .arrow-text {
+    span {
+      @apply text-base;
+    }
+    i {
+      @apply text-[20px];
+    }
+  }
+
+  .parent {
+    & > a {
+      @apply my-2 block;
+    }
+    .sub1 {
+      @apply py-1 pr-8;
+      .arrow-text {
+        @apply text-primary-main;
+        span {
+          @apply text-lg;
+        }
+        i {
+          @apply text-[18px];
+        }
+      }
+    }
+
+    .sub2 {
+      @apply pt-2 pr-8;
+      list-style: disc;
+      li {
+        @apply text-primary-main;
+      }
+      a {
+        @apply text-primary-main text-lg;
+      }
+    }
+  }
+}

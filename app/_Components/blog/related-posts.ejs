@@ -1,0 +1,57 @@
+<aside class="blue-box lg:col-span-2 xl:col-span-2">
+  <div class="blue-box-content">
+    <span
+      class="inline-block border-2 border-solid border-transparent border-b-primary-light mb-5"
+    >
+      مطالب مرتبط
+    </span>
+
+    <div class="grid grid-cols-1 gap-3">
+      <% [0,0,0,0,0].forEach(()=>{%>
+
+      <div class="white-box overflow-hidden">
+        <div class="flex items-start gap-2">
+          <div class="w-[130px] h-[130px] overflow-hidden rounded-bl-lg">
+            <img
+              src="/assets/images/banner.png"
+              alt="x"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="p-2 flex-grow grid grid-cols-1 gap-2 text-center">
+            <a
+              href="#"
+              class="block bg-body shadow-inner px-3 py-2 rounded-md text-sm"
+            >
+              یکینورتکلا مزاول
+            </a>
+            <span
+              href="#"
+              class="block bg-body shadow-inner px-3 py-2 rounded-md text-sm"
+            >
+              1400/10/20
+            </span>
+            <span
+              href="#"
+              class="block bg-body shadow-inner px-3 py-2 rounded-md text-sm"
+            >
+              <span> زمان مطالعه: </span>
+              <span> 20 </span>
+              <span> دقیقه </span>
+            </span>
+          </div>
+        </div>
+
+        <h2
+          class="whitespace-nowrap text-ellipsis overflow-hidden p-3 text-lg"
+        >
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است
+        </h2>
+      </div>
+
+      <%}) %>
+    </div>
+  </div>
+</aside>

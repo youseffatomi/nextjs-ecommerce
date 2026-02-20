@@ -1,0 +1,19 @@
+.counter {
+  @apply flex w-[140px] items-center justify-between;
+
+  input {
+    @apply w-[25px] bg-transparent text-center text-lg;
+  }
+
+  span {
+    @apply text-lg;
+  }
+
+  button {
+    @apply max-w-[40px];
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+}

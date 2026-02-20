@@ -1,0 +1,422 @@
+<div class="white-box-content z-[-1]">
+  <div class="scroll-box">
+    <div class="scroll-box-content max-h-[600px] flex flex-col gap-4">
+      <% [0,0,0,0,0].forEach((e,index)=>{%>
+
+      <section>
+        <div class="white-box-content bg-white text-lg relative z-0">
+          <div
+            class="absolute top-0 left-0 p-3 bg-body shadow-neomorphism-right-bottom rounded-br-md"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-lg"> 5.0 </span>
+
+              <div class="static-star-rate" value="1"></div>
+            </div>
+
+            <span class="text-left w-full block mt-2">Mar 20,2021</span>
+          </div>
+
+          <div class="flex items-center gap-3 mt-20 sm:mt-0">
+            <img
+              src="/assets/images/banner.png"
+              alt=""
+              class="w-[43px] h-[43px] object-cover rounded-full border-2 border-solid border-primary-main"
+            />
+            <div class="font-medium text-lg">
+              <span class="block">دکتر جیمز سالیوان</span>
+              <span class="block text-primary-main">دیـــــــدگاه</span>
+            </div>
+          </div>
+
+          <div class="flex items-center md:gap-1 flex-wrap my-4">
+            <img src="/assets/images/icons/like.svg" alt="" class="w-[24px]" />
+            <span class="font-medium text-green-500 text-lg">
+              خرید این محصول را توصیه می کنم
+            </span>
+          </div>
+          <div class="flex items-center md:gap-1 flex-wrap my-4">
+            <img
+              src="/assets/images/icons/dislike.svg"
+              alt=""
+              class="w-[24px]"
+            />
+            <span class="font-medium text-red-500 text-lg">
+              خرید این محصول را توصیه نمی کنم
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-3 mt-4">
+            <h3 class="font-medium md:w-9/12">
+              اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+              اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+              کنند.
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+              <% [0,0,0,0,0].forEach(()=>{%>
+
+              <img
+                src="/assets/images/CCCC1.png"
+                class="w-[55px] h-[55px] lg:w-[75px] lg:h-[75px] object-cover"
+              />
+              <% }) %>
+            </div>
+
+            <p class="text-gray text-justify">
+              من از Razer Death Adder V2 (بهترین موش جهان) به این هدف رسیدم. من
+              از آن به شدت برای کار استفاده می کنم زیرا باید مقدار زیادی حرکت
+              کنم. این ماوس عالی است زیرا ارگونومیک است و می توانید با چرخاندن
+              چرخ ، کل صفحات را فوراً پیمایش کنید. تنها نکته منفی این است که کمی
+              کوچک است و دستانم برای شروع بزرگ نیستند. من مدت طولانی آن را
+              نداشتم ، اما اگر باتری در واقع تا زمانی که جعبه می گوید دوام
+              بیاورد ، بسیار خوب است. من احساس می کنم موش ارزش سرمایه گذاری دارد
+              ، به خصوص اگر کار شما مستلزم استفاده از ماوس باشد. راحتی همیشه یک
+              سرمایه گذاری عاقلانه است.
+            </p>
+          </div>
+          <br />
+
+          <div
+            class="flex items-start justify-between flex-wrap gap-2 lg:gap-0"
+          >
+            <div
+              class="w-full md:items-center lg:w-8/12 xl:w-7/12 2xl:w-6/12 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
+              <span
+                class="p-2 text-center text-primary-main bg-body rounded-sm"
+              >
+                خریدار تایید شده
+              </span>
+              <span
+                class="p-2 text-center text-primary-main bg-body rounded-sm"
+              >
+                رنگ : خاکستری فضایی
+              </span>
+              <span class="text-green-500 lg:col-span-2">
+                150 نفر این نظر را مفید دانسته اند.
+              </span>
+            </div>
+            <div
+              class="w-full lg:w-4/12 xl:w-3/12 flex flex-col gap-3 sm:flex-row relative"
+            >
+              <!-- not active -->
+              <button
+                class="btn-small bg-primary-light text-white w-full hover:bg-white hover:!text-black hover:shadow-neomorphism-top-left transition-all"
+              >
+                <span>مفید بود</span>
+              </button>
+              <!-- active -->
+              <!-- <button
+                class="btn-small bg-white text-black w-full shadow-neomorphism transition-all"
+              >
+                <span>مفید بود</span>
+              </button> -->
+
+              <button
+                popup-open="haveQuestion<%= index %>"
+                class="btn-small text-black w-full hover:bg-primary-light hover:text-white hover:shadow-neomorphism-top-left transition-all"
+              >
+                <span>سوال داری؟</span>
+              </button>
+
+              <button
+                popup-open="report<%= index %> "
+                class="btn-small text-black w-full"
+                style="text-decoration: underline"
+              >
+                <span>گذارش دیدگاه</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div popup-name="haveQuestion<%= index %>" class="popup-content">
+          <div class="popup-container">
+            <div class="popup-content-box">
+              <div class="sm:mb-2">
+                <button
+                  popup-close="haveQuestion<%= index %>"
+                  class="p-2 rounded-bl-2xl bg-body"
+                >
+                  <img src="/assets/images/icons/close-circle.svg" alt="x" />
+                </button>
+              </div>
+
+              <div class="white-box">
+                <div class="white-box-content">
+                  <div class="blue-box">
+                    <div class="blue-box-content">
+                      <div
+                        class="text-base mb-3 flex flex-col sm:flex-row items-center justify-between"
+                      >
+                        <span></span>
+
+                        <button class="btn-small" copy-target=".inp.question">
+                          <img src="/assets/images/icons/copy.svg" alt="" />
+                          <span>کپی متن در کلیپبورد</span>
+                        </button>
+                      </div>
+
+                      <input
+                        type="text"
+                        class="inp mb-3"
+                        placeholder="عنوان پرسش"
+                      />
+                      <textarea
+                        placeholder="پرسش خودت رو بنویس..."
+                        class="inp question"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <button
+                    class="mt-3 btn-main bg-primary-main text-white w-full"
+                  >
+                    ارسال پرسش
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div popup-name="report<%= index %>" class="popup-content">
+          <div class="popup-container">
+            <div class="popup-content-box">
+              <div class="sm:mb-2">
+                <button
+                  popup-close="report<%= index %>"
+                  class="p-2 rounded-bl-2xl bg-body"
+                >
+                  <img src="/assets/images/icons/close-circle.svg" alt="x" />
+                </button>
+              </div>
+
+              <div class="bg-primary-light">
+                <p class="px-3 py-3 text-white text-center">
+                  به ما کمک می کنمی کاربرامون رو بهتر بشناسیم؟
+                </p>
+              </div>
+              <div class="white-box">
+                <div class="white-box-content">
+                  <span class="font-medium mb-3 block">
+                    مشکل این نظر چی بوده؟</span
+                  >
+
+                  <form>
+                    <div>
+                      <div class="flex items-center mb-3">
+                        <label class="min-w-[50px] radio-btn">
+                          <input type="radio" name="report" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <span class="text-sm">توهین کرده بهت؟</span>
+                      </div>
+                      <div class="flex items-center mb-3">
+                        <label class="min-w-[50px] radio-btn">
+                          <input type="radio" name="report" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <span class="text-sm">فکر می کنی کلاه برداره؟</span>
+                      </div>
+                      <div class="flex items-center mb-3">
+                        <label class="min-w-[50px] radio-btn">
+                          <input type="radio" name="report" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <span class="text-sm"
+                          >اوه اوه قوانینو رعایت نکرده؟</span
+                        >
+                      </div>
+                      <div class="flex items-center mb-3">
+                        <label class="min-w-[50px] radio-btn">
+                          <input type="radio" name="report" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <span class="text-sm">از این تبلیغ کننده الکیاست؟</span>
+                      </div>
+                      <div class="flex items-center mb-3">
+                        <label class="min-w-[50px] radio-btn">
+                          <input type="radio" name="report" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <span class="text-sm">خوشم نمیاد ازش</span>
+                      </div>
+                    </div>
+                    <button
+                      class="mt-3 btn-hover btn-main bg-primary-main text-white w-full"
+                    >
+                      ارسال پرسش
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="white-box-content bg-white text-lg">
+          <div class="flex items-center gap-3 mt-20 sm:mt-0">
+            <img
+              src="/assets/images/icons/message-question.svg"
+              alt=""
+              class="w-[43px] h-[43px] object-cover"
+            />
+            <div class="font-medium text-lg">
+              <span class="block">دکتر جیمز سالیوان</span>
+              <span class="block text-primary-main">پرسش</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 mt-4">
+            <h3 class="font-medium md:w-9/12">
+              اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+              اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+              کنند.
+            </h3>
+
+            <div class="flex flex-col gap-3">
+              <% [0,0].forEach(()=>{%>
+              <div class="accordion !bg-body">
+                <button title>
+                  <p class="whitespace-nowrap text-ellipsis overflow-hidden">
+                    <span class="text-primary-main"> پاسخ: </span>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                    و با
+                  </p>
+                </button>
+                <div content-box>
+                  <div content>
+                    <div class="text-lg">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                      روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                      شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+                      بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                      درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
+                      طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+                      ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                      ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+                      موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+                      وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی
+                      سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                      قرار گیرد.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <div class="accordion">
+              <div content-box>
+                <div content class="!p-0">
+                  <div class="flex flex-col gap-3">
+                    <% [0,0].forEach(()=>{%>
+                    <div class="accordion !bg-body">
+                      <button title>
+                        <p
+                          class="whitespace-nowrap text-ellipsis overflow-hidden"
+                        >
+                          <span class="text-primary-main"> پاسخ: </span>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                          از صنعت چاپ و با
+                        </p>
+                      </button>
+                      <div content-box>
+                        <div content>
+                          <div class="text-lg">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                            و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                            لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                            باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+                            آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+                            نرم افزارها شناخت بیشتری را برای طراحان رایانه ای
+                            علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و
+                            دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به
+                            پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای
+                            اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                            اساسا مورد استفاده قرار گیرد.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <% }) %>
+                  </div>
+                </div>
+              </div>
+              <div
+                title
+                class="max-w-[210px] md:max-w-[240px] text-primary-light"
+              >
+                دیدن 2 پاسخ دیگر به این پرسش
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div class="flex items-start justify-end flex-wrap gap-2 lg:gap-0">
+            <button
+              popup-open="send-replay<%- index  %>"
+              class="btn-main btn-hover bg-primary-dark text-white hover:bg-primary-light hover:shadow-neomorphism-top-left"
+            >
+              <img src="/assets/images/icons/reply_arrow.svg" alt="" />
+              <span> ارسال پاسخ </span>
+            </button>
+          </div>
+        </div>
+        <div popup-name="send-replay<%- index  %>" class="popup-content">
+          <div class="popup-container">
+            <div class="popup-content-box">
+              <div class="sm:mb-2">
+                <button
+                  popup-close="send-replay<%- index  %>"
+                  class="p-2 rounded-bl-2xl bg-body"
+                >
+                  <img src="/assets/images/icons/close-circle.svg" alt="x" />
+                </button>
+              </div>
+
+              <div class="white-box">
+                <div class="white-box-content">
+                  <div class="blue-box">
+                    <div class="blue-box-content">
+                      <div
+                        class="text-base mb-3 flex flex-col sm:flex-row items-center justify-between"
+                      >
+                        <span> متن سوال : </span>
+
+                        <button class="btn-small" copy-target=".inp.question">
+                          <img src="/assets/images/icons/copy.svg" alt="" />
+                          <span>کپی متن در کلیپبورد</span>
+                        </button>
+                      </div>
+
+                      <textarea
+                        placeholder="سوال خودت رو بنویس..."
+                        class="inp question"
+                      >
+                      </textarea>
+                    </div>
+                  </div>
+                  <button
+                    class="mt-3 btn-main bg-primary-main text-white w-full"
+                  >
+                    ارسال پرسش
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <% }) %>
+    </div>
+  </div>
+</div>

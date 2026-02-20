@@ -1,0 +1,156 @@
+<section tab-name="s1">
+  <div class="flex-col flex lg:flex-row items-start gap-5 lg:gap-4">
+    <div class="w-full lg:w-8/12 xl:w-9/12">
+      <div class="blue-box">
+        <div class="blue-box-content flex flex-col gap-3">
+          <div
+            class="bg-white rounded-lg py-2 px-2 md:px-5 w-full flex items-center justify-between"
+          >
+            <div class="flex items-center">
+              <div class="w-[40px]">
+                <img
+                  src="/assets/images/icons/calendar.svg"
+                  class="w-[25px]"
+                  alt="c"
+                />
+              </div>
+              <span
+                class="flex items-center flex-wrap gap-1 sm:gap-3 text-lg"
+              >
+                در تاریخ 21 مرداد 1401 به بازار عرضه میشود
+              </span>
+            </div>
+          </div>
+
+          <!--  -->
+          <% [0,0,0,0,0,0,0].forEach(()=>{%>
+          <div class="accordion">
+            <button title>
+              <div class="flex items-center">
+                <div class="w-[40px]">
+                  <img
+                    src="/assets/images/icons/product-details/cpu-charge.svg"
+                    class="w-[25px]"
+                    alt="c"
+                  />
+                </div>
+                <span
+                  class="flex items-center flex-wrap gap-1 sm:gap-3 text-lg"
+                >
+                  <span class="font-medium">شبکه های ارتباطی:</span>
+                  <span> 5G / 4G / 3G / 2G </span>
+                </span>
+              </div>
+            </button>
+            <div content-box>
+              <div content>
+                <div class="text-lg">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+                  آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم
+                  افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
+                  طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این
+                  صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                  راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل
+                  حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                  موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </div>
+              </div>
+            </div>
+          </div>
+          <%}) %>
+
+          <!--  -->
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:w-4/12 xl:w-3/12">
+      <div class="scroll-box">
+        <div class="scroll-box-content max-h-[600px]">
+          <div class="flex flex-col gap-5">
+            <% [0,0,0,0].forEach((e,index)=>{ %>
+            <div>
+              <button
+                class="info-tab-post"
+                popup-open="product-video<%= index %>"
+              >
+                <div
+                  class="w-[50px] h-[50px] bg-white rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] grid place-items-center"
+                >
+                  <img
+                    src="/assets/images/icons/play.svg"
+                    alt="x"
+                    class="w-[20px]"
+                  />
+                </div>
+                <span class="tag">مقالات</span>
+                <img
+                  src="/assets/images/CCCC1.png"
+                  alt=""
+                  class="info-tab-post-img"
+                />
+                <h3>
+                  بررسی سی پی یو Snapdragon 888 بررسی سی پی یو Snapdragon 888
+                  بررسی سی پی یو Snapdragon 888
+                </h3>
+              </button>
+              <div popup-name="product-video<%= index %>" class="popup-content">
+                <div class="popup-container">
+                  <div class="popup-content-box">
+                    <div class="sm:mb-2">
+                      <button
+                        popup-close="product-video<%= index %>"
+                        class="p-2 rounded-bl-2xl bg-body"
+                      >
+                        <img
+                          src="/assets/images/icons/close-circle.svg"
+                          alt="x"
+                        />
+                      </button>
+                    </div>
+
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <video
+                          class="product-video-player p<%= index %>"
+                          playsinline
+                          controls
+                          data-poster="/assets/images/CCCC1.png"
+                        >
+                          <source
+                            src="/assets/images/CCCC1.png"
+                            type="video/mp4"
+                          />
+                          <source
+                            src="/assets/images/CCCC1.png"
+                            type="video/webm"
+                          />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <%}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+
+  <div class="white-box !bg-body mt-10">
+    <div class="title">
+      <h2>برترین نظرات در آمازون</h2>
+      <a href="#" class="see-all !text-black">
+        <span> مشاهده همه </span>
+        <i class="icon-arrow-left"></i>
+      </a>
+    </div>
+    <%- include("./../amazon-comment") %>
+  </div>
+</section>

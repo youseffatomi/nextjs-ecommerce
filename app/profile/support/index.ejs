@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../../components/layout/head") %>
+  <body>
+    <%- include("./../../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">پشتیبانی</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <a
+                  href="/pages/profile/support/create.html"
+                  class="w-full btn-main btn-hover bg-primary-dark text-white"
+                >
+                  <i class="icon-add-square"></i>
+                  <span> افزودن تیکت پشتیبانی </span>
+                </a>
+
+                <div class="overflow-auto lg:overflow-visible mt-10">
+                  <table
+                    style="border-spacing: 0 0"
+                    class="table text-gray-400 border-separate space-y-6 text-lg min-w-[1000px]"
+                  >
+                    <thead class="bg-body">
+                      <tr>
+                        <th class="p-3">وضعیت</th>
+                        <th class="p-3">شماره تراکنش</th>
+                        <th class="p-3">وضعیت</th>
+                        <th class="p-3">دپارتمان</th>
+                        <th class="p-3"></th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="blue-box">
+                      <% [0,0,0].forEach(e=>{%>
+                      <tr>
+                        <td class="blue-box-content !pl-0 max-w-[200px]">
+                          <div
+                            class="bg-white p-3 rounded-r-lg h-[80px] flex items-center"
+                          >
+                            <p
+                              class="whitespace-nowrap text-ellipsis overflow-hidden"
+                            >
+                              اشکال در سبد خرید اشکال در سبد خرید اشکال در سبد
+                              خرید
+                            </p>
+                          </div>
+                        </td>
+                        <td class="blue-box-content !px-0 max-w-[600px]">
+                          <div class="bg-white p-3 h-[80px] flex items-center">
+                            <div>
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                              صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                              چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                              سطرآنچنان که لازم است.....
+                            </div>
+                          </div>
+                        </td>
+                        <td class="blue-box-content !px-0 min-w-[120px]">
+                          <div class="bg-white p-3 h-[80px] flex items-center">
+                            <div
+                              class="btn-main bg-body text-primary-main w-full"
+                            >
+                              پاسخ کاربر
+                            </div>
+                          </div>
+                        </td>
+                        <td class="blue-box-content !px-0 min-w-[120px]">
+                          <div class="bg-white p-3 h-[80px] flex items-center">
+                            <div
+                              class="btn-main bg-body text-orange-600 w-full"
+                            >
+                              فروش
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="blue-box-content !pr-0 min-w-[150px]">
+                          <div
+                            class="bg-white p-3 rounded-l-lg h-[80px] flex items-center w-full"
+                          >
+                            <a
+                              href="/pages/profile/support/details.html"
+                              class="btn-main btn-hover text-white bg-primary-dark"
+                            >
+                              <img src="/assets/images/icons/eye.svg" alt="" />
+                              <span>مشاهده</span>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+
+                <%- include("./../../../components/pagination.ejs") %>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../../components/layout/footer.ejs") %>
+  </body>
+</html>

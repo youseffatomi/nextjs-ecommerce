@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <%- include("./../../components/blog/menu-bar") %>
+
+            <div
+              class="mt-5 grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-8 gap-5 items-start"
+            >
+              <section class="blue-box lg:col-span-3 xl:col-span-6">
+                <div class="blue-box-content">
+                  <div class="grid grid-cols-1 gap-5">
+                    <% [0,0,0,0,0,0,0,0].forEach(()=>{ %> <%-
+                    include("./../../components/blog/post-box") %> <%}) %>
+                  </div>
+                </div>
+              </section>
+              <%- include("./../../components/blog/related-posts")%>
+            </div>
+
+            <%- include("./../../components/pagination")%>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

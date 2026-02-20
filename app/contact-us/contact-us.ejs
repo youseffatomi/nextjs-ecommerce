@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../components/layout/head") %>
+  <body>
+    <%- include("./../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <div class="relative pt-[100px]">
+              <div class="absolute top-0 left-0 mb-5 w-full">
+                <img
+                  class="absolute top-0 left-[50%] z-[2] w-[300px] translate-x-[-50%] sm:w-[400px] md:w-[500px] xl:w-auto"
+                  src="/assets/images/top-blog-slider.svg"
+                  alt=""
+                />
+                <h1
+                  class="absolute top-[-20px] left-[50%] z-[2] my-5 translate-x-[-50%] text-center text-xl font-bold sm:top-[-15px] sm:text-2xl md:text-3xl xl:top-0 xl:text-4xl"
+                >
+                  تماس با ما
+                </h1>
+
+                <div class="overflow-hidden">
+                  <div
+                    class="h-[600px] overflow-hidden rounded-[50px] bg-slate-800"
+                  >
+                    <img
+                      src="/assets/images/0101.png"
+                      alt="x"
+                      class="absolute top-0 left-0 z-1 h-full w-full rounded-[50px] object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="blue-box relative mx-auto w-10/12 xl:w-[1105px]">
+                <div class="blue-box-content">
+                  <div class="white-box">
+                    <div class="white-box-content">
+                      <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="grid grid-cols-1 gap-5">
+                          <h2 class="text-xl font-bold">آدرس</h2>
+
+                          <p>
+                            شیراز - ملاصدرا - کوچه 9 - ساختمان پویا - واحد 4
+                          </p>
+                          <p>
+                            <span>کد پستی</span>
+                            <span>51516313153</span>
+                          </p>
+
+                          <p>
+                            <span> شماره تماس: </span>
+                            <span>071-1531531</span>
+                          </p>
+
+                          <div class="blue-box">
+                            <div class="blue-box-content">
+                              <p>ما را در شبکه های اجتماعی دنبال کنید:</p>
+
+                              <div
+                                class="text-primary-main my-8 flex flex-wrap items-center justify-end gap-5 md:my-3"
+                              >
+                                <a href="#">
+                                  <i class="icon-Facebook"></i>
+                                </a>
+                                <a href="#">
+                                  <i class="icon-Twitter"></i>
+                                </a>
+                                <a href="#">
+                                  <i class="icon-Linkedin"></i>
+                                </a>
+                                <a href="#">
+                                  <i class="icon-Instagram"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="bg-body min-h-[300px] overflow-hidden rounded-lg"
+                        ></div>
+                      </div>
+
+                      <form class="mt-5 grid grid-cols-1 gap-5">
+                        <h2 class="text-xl font-bold">فرم تماس با ما</h2>
+                        <div class="items-center gap-5 lg:flex">
+                          <input class="inp" placeholder="نام" />
+                          <input class="inp" placeholder="شماره موبایل" />
+                        </div>
+                        <input class="inp" placeholder="عنوان درخواست" />
+                        <textarea
+                          placeholder="شرح درخواست"
+                          class="inp"
+                        ></textarea>
+
+                        <div
+                          class="rounded-lg border-2 border-dashed border-black p-3"
+                        >
+                          <span class="block text-center text-lg">
+                            حداکثر ۵ تصویر jpeg یا PNG حداکثر یک مگابایت، یک
+                            ویدیو MP4 حداکثر ۵۰ مگابایت
+                          </span>
+
+                          <%- include("./../components/select-image") %>
+                        </div>
+
+                        <button
+                          class="btn-main btn-hover bg-primary-dark text-white"
+                        >
+                          تایید و ارسال
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../components/layout/footer.ejs") %>
+  </body>
+</html>

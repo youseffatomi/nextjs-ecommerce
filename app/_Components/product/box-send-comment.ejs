@@ -1,0 +1,168 @@
+<div popup-name="<%= name %>" class="popup-content">
+  <div class="popup-container">
+    <div class="popup-content-box xl:min-w-[900px]">
+      <div class="white-box">
+        <div class="white-box-content">
+          <div
+            class="bg-primary-light mb-3 flex items-center gap-3 rounded-lg px-3 py-3 text-xl"
+          >
+            <img src="/assets/images/icons/messages-3.svg" alt="" />
+            <span class="text-white"> دیدگاه </span>
+          </div>
+          <div class="max-h-[450px] overflow-y-auto">
+            <!--  -->
+            <div class="flex items-center justify-between">
+              <span class="btn-main bg-body">در حال انتظار</span>
+
+              <div class="star-rating"></div>
+              <input type="hidden" value="0" class="star-rating-value" />
+            </div>
+
+            <!--  -->
+            <div class="my-4 text-sm">
+              <span> موبایل </span>
+              /
+              <span> شیائومی </span>
+              /
+              <span> شیائومی 11t pro </span>
+            </div>
+
+            <div
+              class="select-like-dislike bg-body my-4 flex items-center gap-3 rounded-lg px-2 py-1"
+            >
+              <div class="btn-toggle active">
+                <input type="checkbox" checked="checked" />
+              </div>
+              <div select-like>
+                <div class="my-4 flex flex-wrap items-center">
+                  <img
+                    src="/assets/images/icons/like.svg"
+                    alt=""
+                    class="w-[24px]"
+                  />
+                  <span class="text-sm font-medium text-green-500">
+                    خرید این محصول را توصیه می کنم
+                  </span>
+                </div>
+              </div>
+              <div select-dislike class="hidden">
+                <div class="my-4 flex flex-wrap items-center">
+                  <img
+                    src="/assets/images/icons/dislike.svg"
+                    alt=""
+                    class="w-[24px]"
+                  />
+                  <span class="text-sm font-medium text-red-500">
+                    خرید این محصول را توصیه نمی کنم
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="blue-box my-4">
+              <div class="blue-box-content">
+                <span class="mb-2 block">عنوان دیدگاه:</span>
+                <input type="text" class="inp block" />
+              </div>
+            </div>
+
+            <!--  -->
+
+            <%- include("./../select-image") %>
+
+            <!--  -->
+
+            <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+              <div>
+                <div class="blue-box">
+                  <div class="blue-box-content">
+                    <div class="flex items-center gap-2">
+                      <img
+                        src="/assets/images/icons/add/add-green.svg"
+                        alt=""
+                      />
+                      <span class="text-lg text-green-600">نقاط مثبت</span>
+                    </div>
+
+                    <%- include("./../input-append-value") %>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="blue-box">
+                  <div class="blue-box-content">
+                    <div class="flex items-center gap-2">
+                      <img
+                        src="/assets/images/icons/minus/minus-red.svg"
+                        alt=""
+                      />
+                      <span class="text-lg text-red-600">نقاط منفی</span>
+                    </div>
+
+                    <%- include("./../input-append-value") %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="blue-box my-5">
+              <div class="blue-box-content">
+                <div
+                  class="mb-3 flex flex-col items-center justify-between text-base sm:flex-row"
+                >
+                  <span> متن سوال : </span>
+
+                  <button class="btn-small" copy-target=".inp.sendComment">
+                    <img src="/assets/images/icons/copy.svg" alt="" />
+                    <span>کپی متن در کلیپبورد</span>
+                  </button>
+                </div>
+
+                <textarea
+                  placeholder="سوال خودت رو بنویس..."
+                  class="inp sendComment"
+                >
+                </textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="blue-box mt-5">
+            <div class="blue-box-content">
+              <div class="white-box">
+                <div class="white-box-content">
+                  <div
+                    class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between"
+                  >
+                    <span>ارسال دیدگاه:</span>
+
+                    <div class="flex items-center gap-4">
+                      <button
+                        class="btn-main bg-primary-dark btn-hover"
+                        popup-close="<%= name %>"
+                      >
+                        <img
+                          src="/assets/images/icons/add/add-white.svg"
+                          alt=""
+                        />
+                        <span class="text-white">ثبت دیدگاه</span>
+                      </button>
+                      <button
+                        class="btn-main btn-hover bg-body btn-hover"
+                        popup-close="<%= name %>"
+                      >
+                        <i class="icon-minus-black"></i>
+                        <span>انصراف</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

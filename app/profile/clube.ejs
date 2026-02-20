@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">لومکس کلاب</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-7 gap-3">
+                  <div
+                    class="lg:col-span-2 flex items-center justify-between flex-wrap bg-primary-light shadow-neomorphism-top-left text-white px-4 py-3 rounded-lg"
+                  >
+                    <div class="flex items-center gap-3">
+                      <img
+                        src="/assets/images/icons/white-star.svg"
+                        alt="start"
+                      />
+                      <span> لومکس کلاب: </span>
+                    </div>
+                    <div>
+                      <span class="text-yellow-300"> 40 </span>
+                      <span>امتیاز</span>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="blue-box lg:col-span-4">
+                    <div class="blue-box-content text-lg">
+                      شما با هر خریدی که از وبسایت انجام دهید ، امتیاز های خرید
+                      به صورت خودکار به حسابتان واریز خواهد شد
+                    </div>
+                  </div>
+                  <!--  -->
+                  <button
+                    popup-open="rate-history"
+                    class="lg:col-span-1 btn-main btn-hover text-white bg-primary-dark"
+                  >
+                    تاریخچه امتیازات
+                  </button>
+                </div>
+                <div popup-name="rate-history" class="popup-content">
+                  <div class="popup-container">
+                    <div class="popup-content-box">
+                      <div class="sm:mb-2">
+                        <button
+                          popup-close="rate-history"
+                          class="p-2 rounded-bl-2xl bg-body"
+                        >
+                          <img
+                            src="/assets/images/icons/close-circle.svg"
+                            alt="x"
+                          />
+                        </button>
+                      </div>
+
+                      <div class="white-box">
+                        <div
+                          class="white-box-content text-lg flex flex-col gap-2 overflow-y-auto max-h-[80vh]"
+                        >
+                          <% [0,0,0,0].forEach(e=>{%>
+
+                          <div class="blue-box">
+                            <div
+                              class="blue-box-content grid grid-cols-1 md:grid-cols-2 gap-5"
+                            >
+                              <span
+                                class="text-red-500 flex items-center gap-2"
+                              >
+                                <i class="icon-minus-black"></i>
+                                <span>کاهش</span>
+                              </span>
+
+                              <span class="md:text-left">
+                                <span>2</span>
+                                <span>امتیاز</span>
+                              </span>
+                              <span>
+                                <span>بابت : شرکت در قرعه کشی هفتگی</span>
+                              </span>
+                              <span class="md:text-left">1401/02/10</span>
+                            </div>
+                          </div>
+
+                          <div class="blue-box">
+                            <div
+                              class="blue-box-content grid grid-cols-1 md:grid-cols-2 gap-5"
+                            >
+                              <span
+                                class="text-primary-main flex items-center gap-2"
+                              >
+                                <i class="icon-minus-black"></i>
+                                <span>افزایش</span>
+                              </span>
+
+                              <span class="md:text-left">
+                                <span>2</span>
+                                <span>امتیاز</span>
+                              </span>
+                              <span>
+                                <span>بابت : شرکت در قرعه کشی هفتگی</span>
+                              </span>
+                              <span class="md:text-left">1401/02/10</span>
+                            </div>
+                          </div>
+                          <%}) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ======= -->
+
+                <section class="blue-box mt-5">
+                  <div class="blue-box-content">
+                    <div
+                      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-5"
+                    >
+                      <% [0,0,0,0,0,0,0,0,0,0,0].forEach((e,index)=>{%>
+
+                      <div class="bg-white rounded-md h-[280px] relative group">
+                        <div class="w-6/12 mx-auto my-5">
+                          <img
+                            src="/assets/images/Namava.png"
+                            alt="Namava"
+                            class="max-w-[300px] mx-auto"
+                          />
+                        </div>
+
+                        <p class="text-center text-sm px-4 my-5">
+                          25 درصد تخفیف اشتراک 3 ماهه نماوا مخصوص مشترکین دائمی
+                        </p>
+
+                        <div
+                          class="h-[40px] flex items-center justify-between bg-primary-light text-white border-t-2 border-t-body border-dashed"
+                        >
+                          <span
+                            class="bg-body rounded-l-lg w-[10px] h-full"
+                          ></span>
+                          <span> اعتبار تا 25 خرداد 1400 </span>
+                          <span
+                            class="bg-body rounded-r-lg w-[10px] h-full"
+                          ></span>
+                        </div>
+
+                        <div
+                          class="py-6 flex items-center justify-between px-5 text-primary-dark"
+                        >
+                          <img
+                            src="/assets/images/icons/star-gold.svg"
+                            alt="star"
+                          />
+
+                          <span>40 امتیاز</span>
+                        </div>
+
+                        <button
+                          popup-open="cart-details<%= index %>"
+                          class="absolute bottom-0 left-0 w-full !rounded-t-[30px] opacity-0 group-hover:opacity-100 transition-all !rounded-b-0 !py-3 bg-primary-light text-white btn-larg"
+                        >
+                          جزئیات بیشتر
+                        </button>
+                        <div
+                          popup-name="cart-details<%= index %>"
+                          class="popup-content"
+                        >
+                          <div class="popup-container">
+                            <div class="popup-content-box">
+                              <div class="sm:mb-2">
+                                <button
+                                  popup-close="cart-details<%= index %>"
+                                  class="p-2 rounded-bl-2xl bg-body"
+                                >
+                                  <img
+                                    src="/assets/images/icons/close-circle.svg"
+                                    alt="x"
+                                  />
+                                </button>
+                              </div>
+
+                              <div class="white-box">
+                                <div
+                                  class="white-box-content text-lg flex flex-col gap-2 overflow-y-auto max-h-[80vh]"
+                                >
+                                  <div
+                                    class="flex flex-col items-center gap-5 md:flex-row-reverse md:items-start"
+                                  >
+                                    <img
+                                      src="/assets/images/Namava.png"
+                                      class="max-w-[300px]"
+                                    />
+
+                                    <div>
+                                      <strong class="text-lg"
+                                        >۴۵% تخفیف اشتراک یک ماهه از نماوا
+                                      </strong>
+                                      <div class="mt-3 mb-6">
+                                        <p>45% تخفیف اشتراک یک ماهه از نماوا</p>
+                                        <p>
+                                          برای استفاده از این کد تخفیف وارد
+                                          وبسایت namava.ir شده، ثبت نام کرده و
+                                          بعد از انتخاب اشتراک یک ماهه کد را در
+                                          قسمت کد تخفیف وارد نمایید.
+                                        </p>
+                                      </div>
+
+                                      <p>شماره پشتیبانی: 36366666-071</p>
+                                    </div>
+                                  </div>
+                                  <hr class="opacity-10" />
+                                  <button
+                                    class="btn-main btn-hover bg-primary-main text-white"
+                                  >
+                                    دریافت جایزه
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <%}) %>
+                    </div>
+                  </div>
+                </section>
+
+                <%- include("./../../components/pagination.ejs") %>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

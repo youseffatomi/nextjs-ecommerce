@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">اطلاعات حساب کاربری</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <section class="mt-5">
+                  <div class="blue-box">
+                    <div class="blue-box-content">
+                      <div
+                        class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5"
+                      >
+                        <div>
+                          <div class="relative mx-auto w-[150px] h-[150px]">
+                            <img
+                              src="/assets/images/Profile.png"
+                              class="w-full h-full object-cover rounded-full border-[6px] border-solid border-primary-dark"
+                              alt=""
+                            />
+
+                            <button
+                              popup-open="edit-profile"
+                              class="btn-main rounded-full absolute right-0 bottom-0 bg-primary-dark"
+                            >
+                              <img
+                                src="/assets/images/icons/edit-white.svg"
+                                class="w-[20px]"
+                                alt="x"
+                              />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="white-box lg:col-span-2">
+                          <div class="white-box-content">
+                            <div class="flex items-center justify-between">
+                              <span>نام و نام خانوادگی</span>
+
+                              <button popup-open="edit-name">
+                                <img
+                                  src="/assets/images/icons/edit-black.svg"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                            <hr class="border-body my-4" />
+                            <span class="text-primary-main"> پیت ماوریک </span>
+                          </div>
+                          <div
+                            popup-name="edit-name"
+                            class="popup-content"
+                            style="display: none"
+                          >
+                            <div class="popup-container">
+                              <div class="popup-content-box">
+                                <div class="white-box">
+                                  <div class="white-box-content">
+                                    <div
+                                      class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/profile-circle.svg"
+                                        alt=""
+                                      />
+
+                                      <span class="text-white">
+                                        نام و نام خانوادگی
+                                      </span>
+                                    </div>
+
+                                    <div
+                                      class="grid grid-cols-1 md:grid-cols-2 gap-3 my-5"
+                                    >
+                                      <input class="inp" placeholder="*نام" />
+                                      <input
+                                        class="inp"
+                                        placeholder="*نام خانوادگی"
+                                      />
+                                    </div>
+
+                                    <div
+                                      class="flex flex-col md:flex-row justify-between gap-5"
+                                    >
+                                      <button
+                                        class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/add/add-white.svg"
+                                          alt="0"
+                                        />
+                                        <span> افزودن</span>
+                                      </button>
+                                      <input
+                                        type="file"
+                                        class="hidden profileUploadAvatar"
+                                      />
+                                      <button
+                                        class="btn-main min-w-[150px] bg-body text-black"
+                                        popup-close="edit-name"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/minus/minus-black.svg"
+                                          alt="0"
+                                        />
+                                        <span> انصراف </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="white-box md:col-span-2 lg:col-span-2">
+                          <div class="white-box-content">
+                            <div>
+                              <span>شماره تماس</span>
+
+                              <span
+                                class="inline-block !py-1 text-sm btn-main bg-primary-main text-white"
+                                >تایید شده</span
+                              >
+                            </div>
+                            <hr class="border-body my-4" />
+                            <span class="text-primary-main"> 09172228822 </span>
+                          </div>
+                        </div>
+
+                        <div class="white-box lg:col-span-3">
+                          <div class="white-box-content">
+                            <div class="flex items-center justify-between">
+                              <span>تاریخ تولد</span>
+
+                              <button popup-open="edit-birthday">
+                                <img
+                                  src="/assets/images/icons/edit-black.svg"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                            <hr class="border-body my-4" />
+                            <span class="text-primary-main"> ------- </span>
+                          </div>
+                          <div
+                            popup-name="edit-birthday"
+                            class="popup-content"
+                            style="display: none"
+                          >
+                            <div class="popup-container">
+                              <div class="popup-content-box">
+                                <div class="white-box">
+                                  <div class="white-box-content">
+                                    <div
+                                      class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/calendar-2.svg"
+                                        alt=""
+                                      />
+
+                                      <span class="text-white">
+                                        تاریخ تولد
+                                      </span>
+                                    </div>
+
+                                    <div class="my-5">
+                                      <input
+                                        class="inp"
+                                        type="date"
+                                        placeholder="*تاریخ تولد"
+                                      />
+                                    </div>
+
+                                    <div
+                                      class="flex flex-col md:flex-row justify-between gap-5"
+                                    >
+                                      <button
+                                        class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/add/add-white.svg"
+                                          alt="0"
+                                        />
+                                        <span> افزودن</span>
+                                      </button>
+                                      <input
+                                        type="file"
+                                        class="hidden profileUploadAvatar"
+                                      />
+                                      <button
+                                        class="btn-main min-w-[150px] bg-body text-black"
+                                        popup-close="edit-birthday"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/minus/minus-black.svg"
+                                          alt="0"
+                                        />
+                                        <span> انصراف </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="white-box lg:col-span-2">
+                          <div class="white-box-content">
+                            <div class="flex items-center justify-between">
+                              <div>
+                                <span>ایمیل</span>
+
+                                <span
+                                  class="inline-block !py-1 text-sm btn-main bg-red-700 text-white"
+                                  >تایید نشده</span
+                                >
+                              </div>
+
+                              <button popup-open="edit-email">
+                                <img
+                                  src="/assets/images/icons/edit-black.svg"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                            <hr class="border-body my-4" />
+                            <span class="text-primary-main">
+                              Maverick@gmail.com
+                            </span>
+                          </div>
+
+                          <div
+                            popup-name="edit-email"
+                            class="popup-content"
+                            style="display: none"
+                          >
+                            <div class="popup-container">
+                              <div class="popup-content-box">
+                                <div class="white-box">
+                                  <div class="white-box-content">
+                                    <div
+                                      class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/sms-tracking-white.svg"
+                                        alt=""
+                                      />
+
+                                      <span class="text-white"> ایمیل </span>
+                                    </div>
+
+                                    <div class="my-5">
+                                      <input
+                                        class="inp"
+                                        type="email"
+                                        placeholder="*ایمیل"
+                                      />
+                                    </div>
+
+                                    <div
+                                      class="flex flex-col md:flex-row justify-between gap-5"
+                                    >
+                                      <button
+                                        class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/add/add-white.svg"
+                                          alt="0"
+                                        />
+                                        <span> افزودن</span>
+                                      </button>
+                                      <input
+                                        type="file"
+                                        class="hidden profileUploadAvatar"
+                                      />
+                                      <button
+                                        class="btn-main min-w-[150px] bg-body text-black"
+                                        popup-close="edit-email"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/minus/minus-black.svg"
+                                          alt="0"
+                                        />
+                                        <span> انصراف </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="bg-primary-light py-4 px-2 rounded-lg my-5 flex items-center gap-3"
+                      >
+                        <img
+                          src="/assets/images/icons/dollar-square.svg"
+                          alt=""
+                        />
+
+                        <span class="text-white"> اطلاعات مالی </span>
+                      </div>
+
+                      <div>
+                        <div
+                          class="flex flex-col md:flex-row gap-5 md:justify-center lg:justify-end"
+                        >
+                          <button
+                            popup-open="get-from-wallet"
+                            class="md:w-5/12 xl:w-3/12 2xl:w-2/12 btn-hover btn-main text-white bg-primary-dark"
+                          >
+                            <img
+                              src="/assets/images/icons/money-send.svg"
+                              alt=""
+                            />
+                            <span> برداشت از کیف پول </span>
+                          </button>
+
+                          <button
+                            popup-open="send-to-wallet"
+                            class="md:w-5/12 xl:w-3/12 2xl:w-2/12 btn-hover btn-main text-white bg-primary-dark"
+                          >
+                            <img
+                              src="/assets/images/icons/money-recive.svg"
+                              alt=""
+                            />
+                            <span>واریز به کیف پول </span>
+                          </button>
+                        </div>
+
+                        <div
+                          popup-name="get-from-wallet"
+                          class="popup-content"
+                          style="display: none"
+                        >
+                          <div class="popup-container">
+                            <div class="popup-content-box">
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/money-send.svg"
+                                      alt=""
+                                    />
+
+                                    <span class="text-white">
+                                      برداشت از کیف پول
+                                    </span>
+                                  </div>
+
+                                  <div class="my-5">
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <span class="text-sm">:موجودی شما</span>
+
+                                        <h3 class="text-3xl text-center my-5">
+                                          <span> 150000 </span>
+                                          <span>ریال</span>
+                                        </h3>
+
+                                        <div class="my-5">
+                                          <p
+                                            class="text-center text-[#717C94] text-sm"
+                                          >
+                                            مبلغ مورد نظرتان را وارد کنید
+                                          </p>
+
+                                          <div
+                                            class="my-4 flex items-stretch overflow-hidden rounded-lg border-[#717C94] border-2 border-solid"
+                                          >
+                                            <input
+                                              type="text"
+                                              class="px-3 py-3 w-10/12"
+                                              placeholder="مثال : 20,000"
+                                            />
+                                            <span
+                                              class="w-2/12 text-white bg-[#717C94] grid place-items-center px-5"
+                                              >ریال</span
+                                            >
+                                          </div>
+
+                                          <span class="text-middel mb-3 block"
+                                            >واریز به:</span
+                                          >
+
+                                          <select class="selectBox">
+                                            <option value="x">تست</option>
+                                            <option value="x">تست</option>
+                                            <option value="x">تست</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    class="flex flex-col md:flex-row justify-between gap-5"
+                                  >
+                                    <button
+                                      popup-close="get-from-wallet"
+                                      popup-open="get-from-wallet-success"
+                                      class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/money-send.svg"
+                                        alt="0"
+                                      />
+                                      <span> درخواست برداشت</span>
+                                    </button>
+
+                                    <button
+                                      class="btn-main min-w-[150px] bg-body text-black"
+                                      popup-close="get-from-wallet"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/minus/minus-black.svg"
+                                        alt="0"
+                                      />
+                                      <span> انصراف </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          popup-name="get-from-wallet-success"
+                          class="popup-content"
+                          style="display: none"
+                        >
+                          <div class="popup-container">
+                            <div class="popup-content-box">
+                              <div class="white-box">
+                                <div class="sm:mb-2">
+                                  <button
+                                    popup-close="get-from-wallet-success"
+                                    class="p-2 rounded-bl-2xl bg-body"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/close-circle.svg"
+                                      alt="x"
+                                    />
+                                  </button>
+                                </div>
+                                <div class="white-box-content text-center">
+                                  <span>
+                                    درخواست برداشت شما ثبت و مبلغ درخواستی پس از
+                                    واریز به اطلاع شما میرسد.
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          popup-name="send-to-wallet"
+                          class="popup-content"
+                          style="display: none"
+                        >
+                          <div class="popup-container">
+                            <div class="popup-content-box">
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/money-recive.svg"
+                                      alt=""
+                                    />
+
+                                    <span class="text-white">
+                                      افزودن موجودی
+                                    </span>
+                                  </div>
+
+                                  <div class="my-5">
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <div class="my-5">
+                                          <p
+                                            class="text-center text-[#717C94] text-sm"
+                                          >
+                                            مبلغ مورد نظرتان را وارد کنید
+                                          </p>
+
+                                          <div
+                                            class="my-4 flex items-stretch overflow-hidden rounded-lg border-[#717C94] border-2 border-solid"
+                                          >
+                                            <input
+                                              type="text"
+                                              class="w-10/12 px-3 py-3"
+                                              placeholder="مثال : 20,000"
+                                            />
+                                            <span
+                                              class="w-2/12 text-white bg-[#717C94] grid place-items-center px-5"
+                                              >ریال</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    class="flex flex-col md:flex-row justify-between gap-5"
+                                  >
+                                    <button
+                                      class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/add/add-white.svg"
+                                        alt="0"
+                                      />
+                                      <span> افزایش کیف پول</span>
+                                    </button>
+
+                                    <button
+                                      class="btn-main min-w-[150px] bg-body text-black"
+                                      popup-close="send-to-wallet"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/minus/minus-black.svg"
+                                        alt="0"
+                                      />
+                                      <span> انصراف </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="white-box grid place-items-center min-h-[150px] mt-5"
+                      >
+                        <div class="white-box-content text-center">
+                          <span class="text-xl">
+                            شما هنوز هیچ حسابی ثبت نکرده اید
+                          </span>
+                        </div>
+                      </div>
+
+                      <% [0,0].forEach((e,index)=>{%>
+
+                      <div class="white-box mt-5">
+                        <div class="white-box-content">
+                          <div class="flex items-center justify-between">
+                            <div>
+                              <span>شماره شبا</span>
+
+                              <span
+                                class="inline-block !py-1 text-sm btn-main bg-primary-light text-white"
+                                >تایید شده</span
+                              >
+                            </div>
+
+                            <button popup-open="edit-shaba-<%= index %>">
+                              <img
+                                src="/assets/images/icons/edit-black.svg"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                          <hr class="border-body my-4" />
+                          <span
+                            class="text-primary-main text-sm md:text-lg"
+                          >
+                            IR25-0120-0200-0000-9281-9131-29
+                          </span>
+                        </div>
+
+                        <div
+                          popup-name="edit-shaba-<%= index %>"
+                          class="popup-content"
+                          style="display: none"
+                        >
+                          <div class="popup-container">
+                            <div class="popup-content-box">
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/dollar-square.svg"
+                                      alt=""
+                                    />
+
+                                    <span class="text-white">
+                                      افزودن شماره حساب
+                                    </span>
+                                  </div>
+
+                                  <div class="my-5">
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <div class="blue-box">
+                                          <div class="blue-box-content">
+                                            <p class="text-sm">شماره شبا:*</p>
+                                            <div
+                                              class="my-4 flex items-stretch overflow-hidden rounded-lg border-[#717C94] border-2 border-solid"
+                                            >
+                                              <input
+                                                type="text"
+                                                class="w-10/12 px-3 py-3 text-left"
+                                                placeholder="xxxx-xxxx-xxxx-xxxx-xxxx-xxxx"
+                                                value="25-0120-0200-0000-9281-9131-29"
+                                              />
+                                              <span
+                                                class="w-2/12 text-white bg-[#717C94] grid place-items-center px-5"
+                                                >IR</span
+                                              >
+                                            </div>
+
+                                            <div class="text-sm">
+                                              <span class="text-red-600"
+                                                >خیلی مهم:</span
+                                              >
+                                              <span>
+                                                فقط شماره شبایی که به نام خودتان
+                                                باشد امکان ثبت دارد</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    class="flex flex-col md:flex-row justify-between gap-5"
+                                  >
+                                    <button
+                                      popup-close="edit-shaba-<%= index %>"
+                                      popup-open="add-shaba-success"
+                                      class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/add/add-white.svg"
+                                        alt="0"
+                                      />
+                                      <span>ویرایش شماره شبا</span>
+                                    </button>
+
+                                    <button
+                                      class="btn-main min-w-[150px] bg-body text-black"
+                                      popup-close="edit-shaba-<%= index %>"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/minus/minus-black.svg"
+                                        alt="0"
+                                      />
+                                      <span> انصراف </span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <%}) %>
+
+                      <button
+                        popup-open="add-shaba"
+                        class="w-full btn-hover btn-main text-white bg-primary-dark mt-5"
+                      >
+                        <i class="icon-add-square"></i>
+                        <span> افزودن حساب </span>
+                      </button>
+
+                      <div
+                        popup-name="add-shaba"
+                        class="popup-content"
+                        style="display: none"
+                      >
+                        <div class="popup-container">
+                          <div class="popup-content-box">
+                            <div class="white-box">
+                              <div class="white-box-content">
+                                <div
+                                  class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                                >
+                                  <img
+                                    src="/assets/images/icons/dollar-square.svg"
+                                    alt=""
+                                  />
+
+                                  <span class="text-white">
+                                    افزودن شماره حساب
+                                  </span>
+                                </div>
+
+                                <div class="my-5">
+                                  <div class="blue-box">
+                                    <div class="blue-box-content">
+                                      <div class="blue-box">
+                                        <div class="blue-box-content">
+                                          <p class="text-sm">شماره شبا:*</p>
+                                          <div
+                                            class="my-4 flex items-stretch overflow-hidden rounded-lg border-[#717C94] border-2 border-solid"
+                                          >
+                                            <input
+                                              type="text"
+                                              class="w-10/12 px-3 py-3 text-left"
+                                              placeholder="xxxx-xxxx-xxxx-xxxx-xxxx-xxxx"
+                                            />
+                                            <span
+                                              class="w-2/12 text-white bg-[#717C94] grid place-items-center px-5"
+                                              >IR</span
+                                            >
+                                          </div>
+
+                                          <div class="text-sm">
+                                            <span class="text-red-600"
+                                              >خیلی مهم:</span
+                                            >
+                                            <span>
+                                              فقط شماره شبایی که به نام خودتان
+                                              باشد امکان ثبت دارد</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="flex flex-col md:flex-row justify-between gap-5"
+                                >
+                                  <button
+                                    popup-close="add-shaba"
+                                    popup-open="add-shaba-success"
+                                    class="btn-hover min-w-[150px] btn-main bg-primary-dark text-white lg:col-span-2"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/add/add-white.svg"
+                                      alt="0"
+                                    />
+                                    <span>افزودن شماره شبا</span>
+                                  </button>
+
+                                  <button
+                                    class="btn-main min-w-[150px] bg-body text-black"
+                                    popup-close="add-shaba"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/minus/minus-black.svg"
+                                      alt="0"
+                                    />
+                                    <span> انصراف </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        popup-name="add-shaba-success"
+                        class="popup-content"
+                        style="display: none"
+                      >
+                        <div class="popup-container">
+                          <div class="popup-content-box">
+                            <div class="white-box">
+                              <div class="sm:mb-2">
+                                <button
+                                  popup-close="add-shaba-success"
+                                  class="p-2 rounded-bl-2xl bg-body"
+                                >
+                                  <img
+                                    src="/assets/images/icons/close-circle.svg"
+                                    alt="x"
+                                  />
+                                </button>
+                              </div>
+                              <div class="white-box-content text-center">
+                                <span>
+                                  شماره شبا شما پس از بررسی کارشناسان در سایت
+                                  ثبت میشود
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <%- include("./../../components/pagination.ejs") %>
+                </section>
+
+                <!-- <%- include("./../../components/pagination.ejs") %> -->
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

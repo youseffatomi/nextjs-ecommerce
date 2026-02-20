@@ -1,0 +1,90 @@
+<div class="white-box-content">
+  <div class="scroll-box">
+    <div class="scroll-box-content max-h-[600px] flex flex-col gap-4">
+      <% [0,0,0,0,0].forEach((e,index)=>{%>
+
+      <div class="white-box-content bg-white text-lg relative">
+        <div
+          class="absolute top-0 left-0 p-3 bg-body shadow-neomorphism-right-bottom rounded-br-md"
+        >
+          <div class="flex items-center gap-3">
+            <span class="text-lg"> 5.0 </span>
+            <div class="static-star-rate" value="3"></div>
+          </div>
+
+          <span class="text-left w-full block mt-2">Mar 20,2021</span>
+        </div>
+
+        <div class="font-medium mt-20 sm:mt-12 md:mt-0">
+          <span>کاربر:</span>
+          <span>یوسف فاطومی</span>
+        </div>
+        <br />
+        <div class="flex flex-col gap-3">
+          <h3 class="font-medium md:w-9/12">
+            اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+            اکنون می فهمم که چرا مردم در واقع برای وسایل جانبی خود پول خرج می
+            کنند.
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+            <% [0,0,0,0,0].forEach(()=>{%>
+
+            <img
+              src="/assets/images/CCCC1.png"
+              class="w-[55px] h-[55px] lg:w-[75px] lg:h-[75px] object-cover"
+            />
+            <% }) %>
+          </div>
+
+          <p class="text-gray text-justify">
+            من از Razer Death Adder V2 (بهترین موش جهان) به این هدف رسیدم. من از
+            آن به شدت برای کار استفاده می کنم زیرا باید مقدار زیادی حرکت کنم.
+            این ماوس عالی است زیرا ارگونومیک است و می توانید با چرخاندن چرخ ، کل
+            صفحات را فوراً پیمایش کنید. تنها نکته منفی این است که کمی کوچک است و
+            دستانم برای شروع بزرگ نیستند. من مدت طولانی آن را نداشتم ، اما اگر
+            باتری در واقع تا زمانی که جعبه می گوید دوام بیاورد ، بسیار خوب است.
+            من احساس می کنم موش ارزش سرمایه گذاری دارد ، به خصوص اگر کار شما
+            مستلزم استفاده از ماوس باشد. راحتی همیشه یک سرمایه گذاری عاقلانه
+            است.
+          </p>
+        </div>
+        <br />
+
+        <div class="flex items-start justify-between flex-wrap gap-3">
+          <div
+            class="w-full lg:items-center md:w-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"
+          >
+            <span class="p-2 text-center text-primary-main bg-body rounded-sm">
+              خریدار تایید شده
+            </span>
+            <span class="p-2 text-center text-primary-main bg-body rounded-sm">
+              رنگ : خاکستری فضایی
+            </span>
+            <span class="text-green-500 md:col-span-2">
+              150 نفر در آمازون از نظر را مفید دانسته اند.
+            </span>
+          </div>
+          <div class="w-full md:w-auto">
+            <button
+              class="dropdown-toggle btn-small text-black bg-body w-full hover:bg-primary-light transition-all"
+              target=".open<%- index  %> "
+            >
+              <img src="/assets/images/icons/translate.svg" alt="x" />
+              <span>ترجمه ماشینی</span>
+            </button>
+          </div>
+
+          <div class="open<%- index %> hidden text-gray">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptas accusantium magnam aliquid iure totam,
+            consequatur optio illo obcaecati tempore illum placeat fugiat
+            pariatur consectetur veritatis ducimus. Recusandae, velit maiores?
+          </div>
+        </div>
+      </div>
+
+      <% }) %>
+    </div>
+  </div>
+</div>

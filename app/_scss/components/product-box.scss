@@ -1,0 +1,44 @@
+.product-box-parent {
+  @apply relative mx-auto block w-[270px];
+  backdrop-filter: blur(5px);
+  .product-box {
+    direction: rtl;
+    transition: all 0.3s;
+    background: linear-gradient(
+      159.53deg,
+      rgba(255, 255, 255, 0.4) 1.09%,
+      rgba(255, 255, 255, 0.3) 99.09%
+    );
+    @apply relative mx-auto min-h-[400px] w-full rounded-lg pb-4;
+    &.active {
+      filter: blur(15px);
+    }
+  }
+  .details-product {
+    transition: all 0.6s;
+    @apply absolute top-0 left-0 h-full w-full p-4 opacity-0;
+
+    &.active {
+      @apply opacity-[1];
+    }
+
+    .details-product-box {
+      direction: ltr;
+      @apply overflow-hidden rounded-lg;
+      &-title {
+        box-shadow: 0 3px 7px gray;
+        @apply flex items-center justify-end gap-2 bg-white px-2 py-2;
+        img {
+          width: 20px !important;
+        }
+        span {
+          @apply text-lg;
+        }
+      }
+      &-description {
+        background-color: rgba(255, 255, 255, 0.4);
+        @apply px-2 py-2 text-[13px];
+      }
+    }
+  }
+}

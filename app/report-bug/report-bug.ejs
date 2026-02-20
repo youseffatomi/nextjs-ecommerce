@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../components/layout/head") %>
+  <body>
+    <%- include("./../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <div class="relative pt-[100px]">
+              <div class="mb-5 absolute top-0 left-0 w-full">
+                <img
+                  class="absolute top-0 left-[50%] translate-x-[-50%] z-[2] w-[300px] sm:w-[400px] md:w-[500px] xl:w-auto"
+                  src="/assets/images/top-blog-slider.svg"
+                  alt=""
+                />
+                <h1
+                  class="absolute top-[-20px] sm:top-[-15px] xl:top-0 left-[50%] translate-x-[-50%] z-[2] text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-center my-5"
+                >
+                  گزارش باگ
+                </h1>
+
+                <div class="overflow-hidden">
+                  <div
+                    class="h-[600px] bg-slate-800 overflow-hidden rounded-[50px]"
+                  >
+                    <img
+                      src="/assets/images/0101.png"
+                      alt="x"
+                      class="absolute top-0 left-0 w-full h-full object-cover z-1 rounded-[50px]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="blue-box w-10/12 xl:w-[1105px] mx-auto relative">
+                <div class="blue-box-content">
+                  <div
+                    class="D43fFA grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 place-items-center"
+                  >
+                    <a
+                      href="#"
+                      class="active flex flex-col items-center justify-center gap-5 bg-white rounded-lg w-[197px] h-[150px] group hover:bg-primary-light hover:text-white hover:shadow-2xl !shadow-[rgb(0,0,0,0.5)] transition-all duration-300"
+                    >
+                      <i
+                        class="icon-bug text-5xl text-primary-main group-hover:text-white transition-all"
+                      ></i>
+
+                      <span> راهنمای خرید </span>
+                    </a>
+                    <% [0,0,0,0].forEach(()=>{%>
+
+                    <a
+                      href="#"
+                      class="flex flex-col items-center justify-center gap-5 bg-white rounded-lg w-[197px] h-[150px] group hover:bg-primary-light hover:text-white hover:shadow-2xl !shadow-[rgb(0,0,0,0.5)] transition-all duration-300"
+                    >
+                      <i
+                        class="icon-bag text-5xl text-primary-main group-hover:text-white transition-all duration-300"
+                      ></i>
+
+                      <span> راهنمای خرید </span>
+                    </a>
+
+                    <%}) %>
+                  </div>
+
+                  <div class="white-box mt-5">
+                    <div class="white-box-content">
+                      <form class="grid grid-cols-1 gap-5">
+                        <div class="lg:flex items-center gap-5">
+                          <input class="inp" placeholder="نام" />
+                          <input class="inp" placeholder="شماره موبایل" />
+                        </div>
+                        <input class="inp" placeholder="عنوان آسیب پذیری" />
+                        <textarea
+                          placeholder="شرح آسیب پذیری"
+                          class="inp"
+                        ></textarea>
+                        <textarea
+                          placeholder="نحوه بازتولید آسیب پذیری*"
+                          class="inp"
+                        ></textarea>
+                        <textarea
+                          placeholder="پیشنهاد رفع آسیب پذیری"
+                          class="inp"
+                        ></textarea>
+
+                        <div
+                          class="border-2 border-dashed border-black p-3 rounded-lg"
+                        >
+                          <span class="block text-center text-lg">
+                            حداکثر ۵ تصویر jpeg یا PNG حداکثر یک مگابایت، یک
+                            ویدیو MP4 حداکثر ۵۰ مگابایت
+                          </span>
+
+                          <%- include("./../components/select-image") %>
+                        </div>
+
+                        <button
+                          class="btn-main btn-hover bg-primary-dark text-white"
+                        >
+                          تایید و ارسال
+                        </button>
+                        <div class="blue-box">
+                          <div class="blue-box-content">
+                            <h4 class="text-xl">قوانین ارسال آسیب پزیری</h4>
+
+                            <p class="text-lg mt-3" style="line-height: 2">
+                              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                              صنعت چاپ و با استفاده از طراحان گرافیک است.
+                              چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                              سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                              مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد
+                              گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را
+                              می طلبد تا با نرم افزارها شناخت بیشتری را برای
+                              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ
+                              پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان
+                              امید داشت که تمام و دشواری موجود در ارائه راهکارها
+                              و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل
+                              حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                              اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                              گیرد.
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../components/layout/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+@layer components {
+  .white-box {
+    @apply rounded-lg bg-white;
+    .title {
+      @apply relative flex w-full items-stretch justify-between;
+      h2 {
+        @apply bg-primary-main px-5 text-sm text-white sm:text-[16px] md:px-7 lg:px-10;
+        border-radius: 0 0.375rem 0 50px;
+        line-height: 3;
+      }
+    }
+    .see-all {
+      @apply ml-5 flex w-[100px] items-center justify-between py-2 text-white sm:w-[140px] sm:py-1;
+      span {
+        @apply text-sm font-medium sm:text-[16px];
+      }
+    }
+    &-content {
+      @apply z-10 rounded-md p-4;
+    }
+  }
+}

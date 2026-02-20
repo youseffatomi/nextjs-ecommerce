@@ -1,0 +1,28 @@
+.select-image {
+  @apply my-4 flex gap-2 flex-wrap;
+  input[type="file"] {
+    @apply hidden;
+  }
+
+  .select-image-box {
+    @apply w-[70px] h-[70px] border-2 border-dashed border-transparent rounded-lg cursor-pointer relative overflow-hidden;
+    &.btn-add-image {
+      @apply border-gray grid place-items-center;
+      &::after {
+        content: "+";
+        @apply text-2xl;
+      }
+      &::before {
+        display: none;
+      }
+    }
+    img {
+      @apply w-full h-full object-cover;
+    }
+    &::before {
+      content: "-";
+      @apply text-lg rounded-br-md text-center text-white bg-red-600 absolute top-0 left-0 w-[18px] h-[18px];
+      line-height: 18px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../../components/layout/head") %>
+  <body>
+    <%- include("./../../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">ایجاد تیکت پشتیبانی</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <section class="blue-box">
+                  <div class="blue-box-content">
+                    <input type="text" class="inp" placeholder="موضوع" />
+
+                    <textarea class="inp my-5" placeholder="توضیحات"></textarea>
+                    <div class="my-5">
+                      <span>انتخاب واحد پشتیبانی:</span>
+                      <div class="mt-3">
+                        <select class="selectBox bg-primary-main">
+                          <option value="1">همه</option>
+                          <option value="2">تست1</option>
+                          <option value="3">2تست</option>
+                          <option value="4">3تست</option>
+                          <option value="5">4تست</option>
+                        </select>
+                      </div>
+                    </div>
+                    <span>انتخاب عکس :</span>
+                    <%- include("./../../../components/select-image") %>
+
+                    <div class="mt-5">
+                      <button
+                        class="btn-main btn-hover text-white bg-primary-dark mr-auto"
+                      >
+                        ارسال تیکت
+                      </button>
+                    </div>
+                  </div>
+                </section>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../../components/layout/footer.ejs") %>
+  </body>
+</html>

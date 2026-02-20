@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">اعلانات</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <div class="blue-box">
+                  <div class="blue-box-content">
+                    <div class="flex gap-5 flex-wrap">
+                      <button
+                        tab-item
+                        tab-target="s1"
+                        class="btn-main btn-tab-list w-full md:w-auto active"
+                      >
+                        همه
+                      </button>
+                      <button
+                        tab-item
+                        tab-target="s2"
+                        class="btn-main btn-tab-list w-full md:w-auto"
+                      >
+                        اطلاع رسانی
+                      </button>
+                      <button
+                        tab-item
+                        tab-target="s3"
+                        class="btn-main btn-tab-list w-full md:w-auto"
+                      >
+                        سفارشات
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <section class="mt-5">
+                  <section tab-name="s1">
+                    <div class="blue-box">
+                      <div class="blue-box-content grid grid-cols-1 gap-5">
+                        <% [0,0].forEach((e,index)=>{%>
+                        <div class="white-box">
+                          <div
+                            class="white-box-content flex flex-wrap lg:flex-nowrap items-start justify-between"
+                          >
+                            <div>
+                              <div class="flex items-center gap-3">
+                                <img
+                                  src="/assets/images/icons/basket.svg"
+                                  alt="x"
+                                />
+                                <span class="font-medium">
+                                  سفارش شماره 228844#
+                                </span>
+                              </div>
+
+                              <p class="mt-8">
+                                سفارش شما به
+                                <strong> ارسال شده </strong>
+                                تغییر وضعیت پیدا کرد
+                              </p>
+                            </div>
+
+                            <span
+                              class="text-lg text-gray w-full mt-5 lg:mt-0 lg:w-[100px] text-left"
+                              >1401/02/10</span
+                            >
+                          </div>
+                        </div>
+                        <%}) %> <% [0,0].forEach((e,index)=>{%>
+                        <div class="white-box">
+                          <div
+                            class="white-box-content flex flex-wrap lg:flex-nowrap items-start justify-between"
+                          >
+                            <div>
+                              <div class="flex items-center gap-3">
+                                <img
+                                  src="/assets/images/icons/speaker-notification.svg"
+                                  alt="x"
+                                />
+                                <span class="font-medium">
+                                  دسته بندی جدید کالاهای لومکس انجاست
+                                </span>
+                              </div>
+
+                              <p class="mt-8">
+                                از این پس میتوانید در فروشگاه لومکس انواع
+                                کالاهای لوازم خانگی را خریداری کنید و دستررسی
+                                این نوع کالاها برای عموم آزاد میباشد
+                              </p>
+                            </div>
+
+                            <span
+                              class="text-lg text-gray w-full mt-5 lg:mt-0 lg:w-[100px] text-left"
+                              >1401/02/10</span
+                            >
+                          </div>
+                        </div>
+                        <%}) %>
+                      </div>
+                    </div>
+                    <%- include("./../../components/pagination.ejs") %>
+                  </section>
+                  <section tab-name="s2" class="hidden">
+                    <div class="blue-box">
+                      <div class="blue-box-content grid grid-cols-1 gap-5">
+                        <% [0,0,0,0].forEach((e,index)=>{%>
+                        <div class="white-box">
+                          <div
+                            class="white-box-content flex flex-wrap lg:flex-nowrap items-start justify-between"
+                          >
+                            <div>
+                              <div class="flex items-center gap-3">
+                                <img
+                                  src="/assets/images/icons/speaker-notification.svg"
+                                  alt="x"
+                                />
+                                <span class="font-medium">
+                                  دسته بندی جدید کالاهای لومکس انجاست
+                                </span>
+                              </div>
+
+                              <p class="mt-8">
+                                از این پس میتوانید در فروشگاه لومکس انواع
+                                کالاهای لوازم خانگی را خریداری کنید و دستررسی
+                                این نوع کالاها برای عموم آزاد میباشد
+                              </p>
+                            </div>
+
+                            <span
+                              class="text-lg text-gray w-full mt-5 lg:mt-0 lg:w-[100px] text-left"
+                              >1401/02/10</span
+                            >
+                          </div>
+                        </div>
+                        <%}) %>
+                      </div>
+                    </div>
+                    <%- include("./../../components/pagination.ejs") %>
+                  </section>
+                  <section tab-name="s3" class="hidden">
+                    <div class="blue-box">
+                      <div class="blue-box-content grid grid-cols-1 gap-5">
+                        <% [0,0,0,0].forEach((e,index)=>{%>
+                        <div class="white-box">
+                          <div
+                            class="white-box-content flex flex-wrap lg:flex-nowrap items-start justify-between"
+                          >
+                            <div>
+                              <div class="flex items-center gap-3">
+                                <img
+                                  src="/assets/images/icons/basket.svg"
+                                  alt="x"
+                                />
+                                <span class="font-medium">
+                                  سفارش شماره 228844#
+                                </span>
+                              </div>
+
+                              <p class="mt-8">
+                                سفارش شما به
+                                <strong> ارسال شده </strong>
+                                تغییر وضعیت پیدا کرد
+                              </p>
+                            </div>
+
+                            <span
+                              class="text-lg text-gray w-full mt-5 lg:mt-0 lg:w-[100px] text-left"
+                              >1401/02/10</span
+                            >
+                          </div>
+                        </div>
+                        <%}) %>
+                      </div>
+                    </div>
+                    <%- include("./../../components/pagination.ejs") %>
+                  </section>
+                </section>
+
+                <!-- <%- include("./../../components/pagination.ejs") %> -->
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+@keyframes openModal {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(-00vh);
+  }
+}
+@keyframes closeModal {
+  from {
+    transform: translateY(-00vh);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+.login-register-modal {
+  input {
+    all: unset;
+  }
+  .login-register-modal-content {
+    transition: all 5s;
+    transform: translateY(-100vh);
+
+    &.close {
+      animation: closeModal 0.5s forwards;
+    }
+    &.show {
+      animation: openModal 0.5s forwards;
+    }
+  }
+
+  &.active {
+    @apply grid;
+  }
+}
+
+.segmentedInput-parent {
+  direction: ltr;
+  @apply grid grid-cols-6 items-center gap-3 w-full px-3;
+
+  .inpCode {
+    border-color: transparent;
+    border-width: 1px;
+    @apply border-solid border-b-stroke text-center;
+  }
+}
+.shaba .segmentedInput-parent {
+  direction: ltr;
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7  gap-3 w-full px-0;
+}

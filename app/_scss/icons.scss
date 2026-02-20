@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("./../assets/fonts/icons/icomoon.woff?ykzd0s") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 25px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bug:before {
+  content: "\e925";
+}
+.icon-bag:before {
+  content: "\e924";
+}
+.icon-minus-black:before {
+  content: "\e911";
+}
+.icon-support:before {
+  content: "\e900";
+}
+.icon-add-square:before {
+  content: "\e901";
+}
+.icon-android:before {
+  content: "\e902";
+}
+.icon-apple:before {
+  content: "\e903";
+}
+.icon-arrow-left:before {
+  content: "\e904";
+}
+.icon-arrow-left-2:before {
+  content: "\e905";
+}
+.icon-bag-tick:before {
+  content: "\e906";
+}
+.icon-box:before {
+  content: "\e907";
+}
+.icon-box-search:before {
+  content: "\e908";
+}
+.icon-calendar:before {
+  content: "\e909";
+}
+.icon-clipboard-close:before {
+  content: "\e90a";
+}
+.icon-clipboard-tick:before {
+  content: "\e90b";
+}
+.icon-clock:before {
+  content: "\e90c";
+}
+.icon-cloud-change:before {
+  content: "\e90d";
+}
+.icon-doller-circle:before {
+  content: "\e90e";
+}
+.icon-emoji-happy:before {
+  content: "\e90f";
+}
+.icon-heart-tick:before {
+  content: "\e910";
+}
+.icon-logout:before {
+  content: "\e912";
+}
+.icon-map:before {
+  content: "\e913";
+}
+.icon-messages-3:before {
+  content: "\e914";
+}
+.icon-notification-bing:before {
+  content: "\e915";
+}
+.icon-profile-circle:before {
+  content: "\e916";
+}
+.icon-receipt-2:before {
+  content: "\e917";
+}
+.icon-setting:before {
+  content: "\e918";
+}
+.icon-shopping-cart:before {
+  content: "\e919";
+}
+.icon-speedometer:before {
+  content: "\e91a";
+}
+.icon-star:before {
+  content: "\e91b";
+}
+.icon-truck-fast:before {
+  content: "\e91c";
+}
+.icon-truck-time:before {
+  content: "\e91d";
+}
+.icon-user:before {
+  content: "\e91e";
+}
+.icon-Twitter:before {
+  content: "\e91f";
+}
+.icon-Facebook:before {
+  content: "\e920";
+}
+.icon-Linkedin:before {
+  content: "\e921";
+}
+.icon-Instagram:before {
+  content: "\e922";
+}
+.icon-verify:before {
+  content: "\e923";
+}

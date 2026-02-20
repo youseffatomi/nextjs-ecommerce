@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../components/layout/head") %>
+  <body>
+    <%- include("./../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen mt-[82px] md:mt-[32px]">
+      <div class="container">
+        <%- include("./../components/product/section1") %>
+        <!--  -->
+        <%- include("./../components/homepage/section2") %>
+
+        <div class="white-box">
+          <div class="white-box-content">
+            <%- include("./../components/product/product-tab/index") %>
+          </div>
+        </div>
+      </div>
+
+      <%- include("./../components/product-carousel",{color:"blue"}) %>
+    </main>
+    <!--  -->
+    <%- include("./../components/layout/footer.ejs") %>
+  </body>
+</html>

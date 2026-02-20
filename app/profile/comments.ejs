@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">دیدگاه ها</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <div class="blue-box">
+                  <div class="blue-box-content">
+                    <div class="flex gap-5 flex-wrap">
+                      <button
+                        tab-item
+                        tab-target="s1"
+                        class="btn-main btn-tab-list w-full md:w-auto active"
+                      >
+                        در انتظار دیدگاه
+                      </button>
+                      <button
+                        tab-item
+                        tab-target="s2"
+                        class="btn-main btn-tab-list w-full md:w-auto"
+                      >
+                        دیدگاه های من
+                      </button>
+                      <button
+                        tab-item
+                        tab-target="s3"
+                        class="btn-main btn-tab-list w-full md:w-auto"
+                      >
+                        در انتظار پاسخ
+                      </button>
+                      <button
+                        tab-item
+                        tab-target="s4"
+                        class="btn-main btn-tab-list w-full md:w-auto"
+                      >
+                        پرسش های من
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <section class="mt-5">
+                  <section tab-name="s1">
+                    <p class="text-primary-main my-8">
+                      با ثبت هر دیدگاه 10 امتیاز دریافت خواهید کرد
+                    </p>
+
+                    <div class="blue-box">
+                      <div class="blue-box-content grid grid-cols-1 gap-5">
+                        <% [0,0,0,0].forEach((e,index)=>{%>
+                        <div class="white-box">
+                          <div
+                            class="white-box-content flex items-center flex-col gap-5 md:flex-row"
+                          >
+                            <div class="max-w-[120px] md:max-w-[70px]">
+                              <img
+                                src="/assets/images/11tpro-black-1.png"
+                                alt="x"
+                                class="w-full"
+                              />
+                            </div>
+
+                            <h3 class="md:flex-grow">
+                              گوشی موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8
+                            </h3>
+
+                            <button
+                              popup-open="submit-comment<%= index %>"
+                              class="btn-main btn-hover bg-primary-main text-white w-full md:w-[200px]"
+                            >
+                              <i class="icon-messages-3"></i>
+                              <span>ثبت دیدگاه</span>
+                            </button>
+                          </div>
+                          <%-
+                          include("./../../components/product/box-send-comment",{name:"submit-comment"
+                          + index}) %>
+                        </div>
+                        <%}) %>
+                      </div>
+                    </div>
+                    <%- include("./../../components/pagination.ejs") %>
+                  </section>
+                  <section tab-name="s2" class="hidden">
+                    <div class="grid grid-cols-1 gap-5">
+                      <div class="blue-box">
+                        <div class="flex items-center justify-between py-3">
+                          <div
+                            class="px-3 py-2 rounded-l-md bg-white flex items-center gap-2 text-red-600"
+                          >
+                            <i class="icon-minus-black"></i>
+                            <span> رد شده </span>
+                          </div>
+
+                          <button
+                            popup-open="submit-commentX"
+                            class="btn-main bg-primary-dark btn-hover text-white ml-5"
+                          >
+                            <img
+                              src="/assets/images/icons/edit-white.svg"
+                              alt="x"
+                            />
+
+                            <span> ویرایش </span>
+                          </button>
+                        </div>
+                        <%-
+                        include("./../../components/product/box-send-comment",{name:"submit-commentX"})
+                        %>
+                        <div class="blue-box-content">
+                          <div class="white-box">
+                            <div class="white-box-content">
+                              <span class="text-sm">
+                                دیدگاه شما به دلیل عدم تطابق با عوانین رد شده
+                                است ، لطفا آن را ویرایش و سپس مجددا مورد بازبینی
+                                تیم فنی قرار خواهد گرفت
+                              </span>
+                            </div>
+                          </div>
+
+                          <div
+                            class="my-5 grid grid-cols-1 gap-5 lg:grid-cols-2"
+                          >
+                            <div>
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="flex items-center gap-2 text-green-700"
+                                  >
+                                    <i class="icon-add-square"></i>
+                                    <span> نقاط مثبت </span>
+                                  </div>
+                                  <div class="grid grid-cols-1 gap-3 mt-5">
+                                    <% [0,0,0].forEach(e=>{%>
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <span class="text-lg">
+                                          دکمه های قابل برنامه ریزی
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <%}) %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="flex items-center gap-2 text-red-700"
+                                  >
+                                    <i class="icon-minus-black"></i>
+                                    <span> نقاط منفی </span>
+                                  </div>
+                                  <div
+                                    class="grid grid-cols-1 gap-3 mt-5 items-start"
+                                  >
+                                    <% [0,0,0,0,0].forEach(e=>{%>
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <span class="text-lg">
+                                          دکمه های قابل برنامه ریزی
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <%}) %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <section>
+                            <div
+                              class="white-box-content bg-white text-lg relative z-0"
+                            >
+                              <div
+                                class="absolute top-0 left-0 p-3 bg-body shadow-neomorphism-right-bottom rounded-br-md"
+                              >
+                                <div class="flex items-center gap-3">
+                                  <span class="text-lg"> 5.0 </span>
+
+                                  <div class="static-star-rate" value="1"></div>
+                                </div>
+
+                                <span class="text-left w-full block mt-2"
+                                  >Mar 20,2021</span
+                                >
+                              </div>
+
+                              <div class="flex flex-col gap-3 mt-4">
+                                <h3 class="font-medium md:w-9/12">
+                                  اکنون می فهمم که چرا مردم در واقع برای وسایل
+                                  جانبی خود پول خرج می اکنون می فهمم که چرا مردم
+                                  در واقع برای وسایل جانبی خود پول خرج می کنند.
+                                </h3>
+
+                                <div class="flex flex-wrap gap-3">
+                                  <% [0,0,0,0,0].forEach(()=>{%>
+
+                                  <img
+                                    src="/assets/images/CCCC1.png"
+                                    class="w-[55px] h-[55px] lg:w-[75px] lg:h-[75px] object-cover"
+                                  />
+                                  <% }) %>
+                                </div>
+
+                                <p class="text-gray text-justify">
+                                  من از Razer Death Adder V2 (بهترین موش جهان)
+                                  به این هدف رسیدم. من از آن به شدت برای کار
+                                  استفاده می کنم زیرا باید مقدار زیادی حرکت کنم.
+                                  این ماوس عالی است زیرا ارگونومیک است و می
+                                  توانید با چرخاندن چرخ ، کل صفحات را فوراً
+                                  پیمایش کنید. تنها نکته منفی این است که کمی
+                                  کوچک است و دستانم برای شروع بزرگ نیستند. من
+                                  مدت طولانی آن را نداشتم ، اما اگر باتری در
+                                  واقع تا زمانی که جعبه می گوید دوام بیاورد ،
+                                  بسیار خوب است. من احساس می کنم موش ارزش سرمایه
+                                  گذاری دارد ، به خصوص اگر کار شما مستلزم
+                                  استفاده از ماوس باشد. راحتی همیشه یک سرمایه
+                                  گذاری عاقلانه است.
+                                </p>
+                              </div>
+                              <br />
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                      <div class="blue-box">
+                        <div class="flex items-center justify-between py-3">
+                          <div
+                            class="px-3 py-2 rounded-l-md bg-white flex items-center gap-2"
+                          >
+                            <i class="icon-cloud-change"></i>
+                            <span> در دست بررسی </span>
+                          </div>
+
+                          <button
+                            popup-open="submit-commentXX"
+                            class="btn-main btn-hover bg-primary-dark text-white ml-5"
+                          >
+                            <img
+                              src="/assets/images/icons/edit-white.svg"
+                              alt="x"
+                            />
+
+                            <span> ویرایش </span>
+                          </button>
+                        </div>
+                        <%-
+                        include("./../../components/product/box-send-comment",{name:"submit-commentXX"})
+                        %>
+                        <div class="blue-box-content">
+                          <div class="white-box">
+                            <div class="white-box-content">
+                              <span class="text-sm">
+                                دیدگاه شما به دلیل عدم تطابق با عوانین رد شده
+                                است ، لطفا آن را ویرایش و سپس مجددا مورد بازبینی
+                                تیم فنی قرار خواهد گرفت
+                              </span>
+                            </div>
+                          </div>
+
+                          <div
+                            class="my-5 grid grid-cols-1 gap-5 lg:grid-cols-2"
+                          >
+                            <div>
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="flex items-center gap-2 text-green-700"
+                                  >
+                                    <i class="icon-add-square"></i>
+                                    <span> نقاط مثبت </span>
+                                  </div>
+                                  <div class="grid grid-cols-1 gap-3 mt-5">
+                                    <% [0,0,0].forEach(e=>{%>
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <span class="text-lg">
+                                          دکمه های قابل برنامه ریزی
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <%}) %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <div
+                                    class="flex items-center gap-2 text-red-700"
+                                  >
+                                    <i class="icon-minus-black"></i>
+                                    <span> نقاط منفی </span>
+                                  </div>
+                                  <div
+                                    class="grid grid-cols-1 gap-3 mt-5 items-start"
+                                  >
+                                    <% [0,0,0,0,0].forEach(e=>{%>
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <span class="text-lg">
+                                          دکمه های قابل برنامه ریزی
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <%}) %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <section>
+                            <div
+                              class="white-box-content bg-white text-lg relative z-0"
+                            >
+                              <div
+                                class="absolute top-0 left-0 p-3 bg-body shadow-neomorphism-right-bottom rounded-br-md"
+                              >
+                                <div class="flex items-center gap-3">
+                                  <span class="text-lg"> 5.0 </span>
+
+                                  <div class="static-star-rate" value="1"></div>
+                                </div>
+
+                                <span class="text-left w-full block mt-2"
+                                  >Mar 20,2021</span
+                                >
+                              </div>
+
+                              <div class="flex flex-col gap-3 mt-4">
+                                <h3 class="font-medium md:w-9/12">
+                                  اکنون می فهمم که چرا مردم در واقع برای وسایل
+                                  جانبی خود پول خرج می اکنون می فهمم که چرا مردم
+                                  در واقع برای وسایل جانبی خود پول خرج می کنند.
+                                </h3>
+
+                                <div class="flex flex-wrap gap-3">
+                                  <% [0,0,0,0,0].forEach(()=>{%>
+
+                                  <img
+                                    src="/assets/images/CCCC1.png"
+                                    class="w-[55px] h-[55px] lg:w-[75px] lg:h-[75px] object-cover"
+                                  />
+                                  <% }) %>
+                                </div>
+
+                                <p class="text-gray text-justify">
+                                  من از Razer Death Adder V2 (بهترین موش جهان)
+                                  به این هدف رسیدم. من از آن به شدت برای کار
+                                  استفاده می کنم زیرا باید مقدار زیادی حرکت کنم.
+                                  این ماوس عالی است زیرا ارگونومیک است و می
+                                  توانید با چرخاندن چرخ ، کل صفحات را فوراً
+                                  پیمایش کنید. تنها نکته منفی این است که کمی
+                                  کوچک است و دستانم برای شروع بزرگ نیستند. من
+                                  مدت طولانی آن را نداشتم ، اما اگر باتری در
+                                  واقع تا زمانی که جعبه می گوید دوام بیاورد ،
+                                  بسیار خوب است. من احساس می کنم موش ارزش سرمایه
+                                  گذاری دارد ، به خصوص اگر کار شما مستلزم
+                                  استفاده از ماوس باشد. راحتی همیشه یک سرمایه
+                                  گذاری عاقلانه است.
+                                </p>
+                              </div>
+                              <br />
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <%- include("./../../components/pagination.ejs") %>
+                  </section>
+                  <section tab-name="s3" class="hidden">
+                    <p class="text-primary-main my-8">
+                      با پاسخ به سئوالات کاربران 20 امتیاز دریافت میکنید
+                    </p>
+
+                    <div class="blue-box">
+                      <div class="blue-box-content">
+                        <div class="grid grid-col-1 gap-5">
+                          <% [0,0,0].forEach((e,index)=>{%>
+
+                          <div class="white-box">
+                            <div class="white-box-content">
+                              <div class="text-lg">
+                                <span> شیائومی 11 </span>/ <span>شیائومی</span>/
+
+                                <span> موبایل </span>
+                              </div>
+
+                              <div
+                                class="flex items-center mt-5 mb-3 gap-2 text-lg"
+                              >
+                                <img
+                                  src="/assets/images/icons/BUT.svg"
+                                  alt="x"
+                                />
+                                <span>یوسف فاطومی</span>
+                              </div>
+
+                              <div class="blue-box my-5">
+                                <div class="blue-box-content text-lg">
+                                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                  از صنعت چاپ، و با استفاده از طراحان گرافیک
+                                  است، چاپگرها و متون بلکه روزنامه و مجله در
+                                  ستون و سطرآنچنان که لازم است. لورم ایپسوم متن
+                                  ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                                  با استفاده از طراحان گرافیک است، چاپگرها و
+                                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                                  که لازم است.
+                                </div>
+                              </div>
+
+                              <button
+                                popup-open="send-replay<%= index  %>"
+                                class="btn-main btn-hover text-white bg-primary-dark"
+                              >
+                                <img
+                                  src="/assets/images/icons/reply_arrow.svg"
+                                  alt="x"
+                                />
+                                <span>ارسال پاسخ</span>
+                              </button>
+                              <div
+                                popup-name="send-replay<%= index  %>"
+                                class="popup-content"
+                              >
+                                <div class="popup-container">
+                                  <div class="popup-content-box">
+                                    <div class="sm:mb-2">
+                                      <button
+                                        popup-close="send-replay<%= index  %>"
+                                        class="p-2 rounded-bl-2xl bg-body"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/close-circle.svg"
+                                          alt="x"
+                                        />
+                                      </button>
+                                    </div>
+
+                                    <div class="white-box">
+                                      <div class="white-box-content">
+                                        <div class="blue-box mb-3">
+                                          <div class="blue-box-content">
+                                            <div class="text-sm">
+                                              <p class="mb-5">متن سوال:</p>
+                                              <p>
+                                                لورم ایپسوم متن ساختگی با تولید
+                                                سادگی نامفهوم از صنعت چاپ و با
+                                                استفاده از طراحان گرافیک است.
+                                                چاپگرها و متون بلکه روزنامه و
+                                                مجله در ستون و سطرآنچنان که لازم
+                                                است و برای شرایط فعلی تکنولوژی
+                                                مورد نیاز و کاربردهای متنوع با
+                                                هدف بهبود ابزارهای کاربردی می
+                                                باشد. کتابهای زیادی در شصت و سه
+                                                درصد گذشته، حال و آینده شناخت
+                                                فراوان جامعه و متخصصان را می
+                                                طلبد تا با نرم افزارها شناخت
+                                                بیشتری را برای طراحان رایانه ای
+                                                علی الخصوص طراحان خلاقی و فرهنگ
+                                                پیشرو در زبان فارسی ایجاد کرد.
+                                                در این صورت می توان امید داشت که
+                                                تمام و دشواری موجود در ارائه
+                                                راهکارها و شرایط سخت تایپ به
+                                                پایان رسد وزمان مورد نیاز شامل
+                                                حروفچینی دستاوردهای اصلی و
+                                                جوابگوی سوالات پیوسته اهل دنیای
+                                                موجود طراحی اساسا مورد استفاده
+                                                قرار گیرد.
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="blue-box">
+                                          <div class="blue-box-content">
+                                            <div
+                                              class="text-base mb-3 flex flex-col sm:flex-row items-center justify-between"
+                                            >
+                                              <span> متن پاسخ : </span>
+
+                                              <button
+                                                class="btn-small"
+                                                copy-target=".inp.replay"
+                                              >
+                                                <img
+                                                  src="/assets/images/icons/copy.svg"
+                                                  alt=""
+                                                />
+                                                <span>کپی متن در کلیپبورد</span>
+                                              </button>
+                                            </div>
+
+                                            <textarea
+                                              placeholder="سوال خودت رو بنویس..."
+                                              class="inp replay"
+                                            >
+                                            </textarea>
+                                          </div>
+                                        </div>
+                                        <button
+                                          class="mt-3 btn-hover btn-main bg-primary-main text-white w-full"
+                                        >
+                                          ارسال پاسخ
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <%}) %>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section tab-name="s4" class="hidden">
+                    <div class="blue-box">
+                      <div class="blue-box-content">
+                        <div class="grid grid-col-1 gap-5">
+                          <% [0,0,0].forEach((e,index)=>{%>
+
+                          <div class="white-box">
+                            <div class="white-box-content">
+                              <div class="text-lg">
+                                <span> شیائومی 11 </span>/ <span>شیائومی</span>/
+
+                                <span> موبایل </span>
+                              </div>
+
+                              <div
+                                class="flex items-center mt-5 mb-3 gap-2 text-lg"
+                              >
+                                <img
+                                  src="/assets/images/icons/BUT.svg"
+                                  alt="x"
+                                />
+                                <span>یوسف فاطومی</span>
+                              </div>
+
+                              <div class="blue-box my-5">
+                                <div class="blue-box-content text-lg">
+                                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                  از صنعت چاپ، و با استفاده از طراحان گرافیک
+                                  است، چاپگرها و متون بلکه روزنامه و مجله در
+                                  ستون و سطرآنچنان که لازم است. لورم ایپسوم متن
+                                  ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                                  با استفاده از طراحان گرافیک است، چاپگرها و
+                                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                                  که لازم است.
+                                </div>
+                              </div>
+
+                              <button
+                                popup-open="send-replay<%= index  %>"
+                                class="btn-main text-white bg-primary-dark"
+                              >
+                                <img
+                                  src="/assets/images/icons/edit.svg"
+                                  alt="x"
+                                />
+                                <span>ویرایش</span>
+                              </button>
+                              <div
+                                popup-name="send-replay<%= index  %>"
+                                class="popup-content"
+                              >
+                                <div class="popup-container">
+                                  <div class="popup-content-box">
+                                    <div class="sm:mb-2">
+                                      <button
+                                        popup-close="send-replay<%= index  %>"
+                                        class="p-2 rounded-bl-2xl bg-body"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/close-circle.svg"
+                                          alt="x"
+                                        />
+                                      </button>
+                                    </div>
+
+                                    <div class="white-box">
+                                      <div class="white-box-content">
+                                        <div class="blue-box">
+                                          <div class="blue-box-content">
+                                            <div
+                                              class="text-base mb-3 flex flex-col sm:flex-row items-center justify-between"
+                                            >
+                                              <span> متن سوال : </span>
+
+                                              <button
+                                                class="btn-small"
+                                                copy-target=".inp.edit-qeuestion"
+                                              >
+                                                <img
+                                                  src="/assets/images/icons/copy.svg"
+                                                  alt=""
+                                                />
+                                                <span>کپی متن در کلیپبورد</span>
+                                              </button>
+                                            </div>
+
+                                            <textarea
+                                              placeholder="سوال خودت رو بنویس..."
+                                              class="inp edit-qeuestion"
+                                            >
+                                            لورم ایپسوم متن ساختگی با تولید
+سادگی نامفهوم از صنعت چاپ و بااستفاده از طراحان گرافیک است.چاپگرها و متون بلکه روزنامه ومجله در ستون و سطرآنچنان که لازماست و برای شرایط فعلی تکنولوژیمورد نیاز و کاربردهای متنوع باهدف بهبود ابزارهای کاربردی میباشد. کتابهای زیادی در شصت و سهدرصد گذشته، حال و آینده شناختفراوان جامعه و متخصصان را میطلبد تا با نرم افزارها شناختبیشتری را برای طراحان رایانه ایعلی الخصوص طراحان خلاقی و فرهنگپیشرو در زبان فارسی ایجاد کرد.در این صورت می توان امید داشت کهتمام و دشواری موجود در ارائهراهکارها و شرایط سخت تایپ بهپایان رسد وزمان مورد نیاز شاملحروفچینی دستاوردهای اصلی وجوابگوی سوالات پیوسته اهل دنیایموجود طراحی اساسا مورد استفادهقرار گیرد.
+                                            </textarea>
+                                          </div>
+                                        </div>
+                                        <button
+                                          class="mt-3 btn-hover btn-main bg-primary-main text-white w-full"
+                                        >
+                                          ویرایش سوال
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <%}) %>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+
+                <!-- <%- include("./../../components/pagination.ejs") %> -->
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

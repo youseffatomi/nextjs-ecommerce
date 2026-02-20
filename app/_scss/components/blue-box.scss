@@ -1,0 +1,7 @@
+.blue-box {
+  @apply white-box bg-body;
+
+  &-content {
+    @apply white-box-content;
+  }
+}

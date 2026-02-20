@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">اپلیکیشن ما</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <div class="flex flex-col xl:flex-row gap-5">
+                  <div>
+                    <img
+                      src="/assets/images/ads+Filters 2.png"
+                      class="max-w-[300px] mx-auto"
+                    />
+                  </div>
+
+                  <div>
+                    <p>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
+                      و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+                      روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                      شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                      بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
+                      درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                      طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+                      ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی
+                      ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+                      موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                      زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی
+                      سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                      قرار گیرد.
+                    </p>
+
+                    <div
+                      class="grid grid-cols-1 gap-5 mt-5 lg:grid-cols-2 xl:w-7/12 xl:mr-auto"
+                    >
+                      <a href="#" class="btn-main bg-body text-black">
+                        <i class="icon-android"></i>
+
+                        <span>دانلود نسخه اندروید</span>
+                      </a>
+                      <a href="#" class="btn-main bg-body text-black">
+                        <i class="icon-apple"></i>
+
+                        <span>دانلود نسخه ios</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@layer components {
+  .btn {
+    @apply py-2 px-3 inline-block text-center rounded-[6px];
+    &-small {
+      @apply rounded-[4px] flex items-center justify-center  gap-2 text-sm  py-2 px-3 transition-all duration-300;
+    }
+    &-main {
+      @apply rounded-[6px] flex items-center  justify-center gap-2 text-[14px]  py-3 px-3 transition-all duration-300;
+    }
+    &-larg {
+      @apply rounded-[8px] flex items-center  justify-center gap-2 text-lg   py-2 px-3 transition-all duration-300;
+    }
+    &-hover {
+      &:hover {
+        @apply bg-primary-light text-white shadow-neomorphism-top-left;
+      }
+    }
+  }
+}

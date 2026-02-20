@@ -1,0 +1,29 @@
+.scroll-box {
+  @apply relative;
+
+  &::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[20px] w-full z-10;
+    background: linear-gradient(0deg, white, transparent);
+  }
+  &-content {
+    @apply overflow-y-scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer components {
+  .scroll-none {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

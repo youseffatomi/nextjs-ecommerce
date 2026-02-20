@@ -1,0 +1,11 @@
+.popup-content {
+  @apply hidden relative;
+  z-index: 11111111 !important;
+  .popup-container {
+    @apply fixed top-0 left-0 w-full h-full  grid place-items-center;
+    background-color: rgba(0, 0, 0, 0.7);
+    .popup-content-box {
+      @apply w-[340px] sm:w-[400px] md:w-[500px] bg-white min-h-[200px] rounded-md overflow-hidden;
+    }
+  }
+}

@@ -1,0 +1,347 @@
+<aside class="blue-box">
+  <div class="blue-box-content">
+    <!--  -->
+    <div class="bg-primary-dark rounded-md p-3 text-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img
+            src="/assets/images/Profile.png"
+            alt="x"
+            class="border-primary-light h-[50px] w-[50px] rounded-full border-2 border-solid object-cover"
+          />
+          <span class="text-base"> پیت ماوریک </span>
+        </div>
+        <button popup-open="edit-profile">
+          <img src="/assets/images/icons/edit.svg" alt="x" />
+        </button>
+      </div>
+      <div popup-name="edit-profile" class="popup-content">
+        <div class="popup-container">
+          <div class="popup-content-box">
+            <div class="sm:mb-2">
+              <button
+                popup-close="edit-profile"
+                class="bg-body rounded-bl-2xl p-2"
+              >
+                <img src="/assets/images/icons/close-circle.svg" alt="x" />
+              </button>
+            </div>
+
+            <div class="white-box">
+              <div class="white-box-content">
+                <div class="flex justify-center">
+                  <img
+                    src="/assets/images/Profile.png"
+                    alt="x"
+                    class="profileAvatarImg border-primary-dark h-[140px] w-[140px] rounded-full border-[6px] border-solid object-cover"
+                  />
+                </div>
+                <p class="my-4 text-center text-lg text-black">
+                  *تصویر شما باید X در Y پیکسل باشد و حداکثر Z کیلوبایت حجم
+                  داشته باشد.
+                </p>
+
+                <div
+                  class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+                >
+                  <button
+                    class="selectAvatarImg btn-hover btn-main bg-primary-dark text-white lg:col-span-2"
+                    onclick="
+                      document.querySelector('.profileUploadAvatar').click()
+                    "
+                  >
+                    <img
+                      src="/assets/images/icons/gallery-import.svg"
+                      alt="0"
+                    />
+                    <span> آپلود عکس </span>
+                  </button>
+                  <button
+                    class="acceptAvatarImg btn-hover btn-main bg-primary-dark !hidden text-white lg:col-span-2"
+                  >
+                    <img src="/assets/images/icons/tick-square.svg" alt="0" />
+                    <span> تایید آواتار </span>
+                  </button>
+                  <input type="file" class="profileUploadAvatar hidden" />
+                  <button
+                    class="btn-main bg-body text-black"
+                    popup-close="edit-profile"
+                  >
+                    <img
+                      src="/assets/images/icons/minus/minus-black.svg"
+                      alt="0"
+                    />
+                    <span> انصراف </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#"
+        class="bg-primary-light group relative mt-3 block w-full overflow-hidden rounded-md p-3"
+      >
+        <div class="flex items-center gap-3 py-2">
+          <img src="/assets/images/icons/white-star.svg" alt="x" />
+          <span> لومکس کلاب </span>
+        </div>
+        <div class="my-1 h-[2px] w-full bg-[rgba(0,0,0,0.1)]"></div>
+        <div class="flex items-center justify-end gap-3 py-2">
+          <span>40</span>
+          <span>امتیاز</span>
+        </div>
+
+        <div
+          class="absolute top-0 left-0 grid h-full w-full place-items-center bg-[rgba(0,0,0,.4)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+          style="backdrop-filter: blur(2px)"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icons/eye.svg" alt="x" />
+            <span>مشاهده</span>
+          </div>
+        </div>
+      </a>
+
+      <button
+        popup-open="wallet"
+        class="bg-primary-light group relative mt-3 block w-full overflow-hidden rounded-md p-3"
+      >
+        <div class="flex items-center gap-3 py-2">
+          <img src="/assets/images/icons/empty-wallet.svg" alt="x" />
+          <span> کیف پول </span>
+        </div>
+        <div class="my-1 h-[2px] w-full bg-[rgba(0,0,0,0.1)]"></div>
+        <div class="flex items-center justify-end gap-3 py-2">
+          <span>150,000</span>
+          <span>تومان</span>
+        </div>
+
+        <div
+          class="absolute top-0 left-0 grid h-full w-full place-items-center bg-[rgba(0,0,0,.4)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+          style="backdrop-filter: blur(2px)"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/assets/images/icons/add/add-white.svg" alt="x" />
+            <span>افزایش موجودی</span>
+          </div>
+        </div>
+      </button>
+      <div popup-name="wallet" class="popup-content">
+        <div class="popup-container">
+          <div class="popup-content-box">
+            <div class="sm:mb-2">
+              <button popup-close="wallet" class="bg-body rounded-bl-2xl p-2">
+                <img src="/assets/images/icons/close-circle.svg" alt="x" />
+              </button>
+            </div>
+
+            <div class="white-box">
+              <div class="white-box-content">
+                <div
+                  class="bg-primary-light flex items-center gap-3 rounded-md p-3 text-white"
+                >
+                  <img src="/assets/images/icons/money-recive.svg" alt="x" />
+                  <span>افزودن موجودی</span>
+                </div>
+
+                <p class="text-stroke my-5 text-center">
+                  مبلغ مورد نظرتان را وارد کنید
+                </p>
+
+                <div class="flex items-stretch">
+                  <input
+                    type="number"
+                    class="inp !rounded-l-none !text-base"
+                    placeholder="مثال :20000"
+                  />
+                  <span
+                    class="bg-stroke block rounded-l-lg px-5 py-3 text-white"
+                    >ریال</span
+                  >
+                </div>
+                <div
+                  class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+                >
+                  <a
+                    href="#"
+                    class="btn-main btn-hover bg-primary-dark text-white lg:col-span-2"
+                  >
+                    <img
+                      src="/assets/images/icons/gallery-import.svg"
+                      alt="0"
+                    />
+                    <span> افزایش کیف پول </span>
+                  </a>
+
+                  <button
+                    class="btn-main bg-body text-black"
+                    popup-close="wallet"
+                  >
+                    <img
+                      src="/assets/images/icons/minus/minus-black.svg"
+                      alt="0"
+                    />
+                    <span> انصراف </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+
+      menu
+
+    -->
+
+    <div class="mt-5 grid grid-cols-1 gap-3">
+      <a
+        href="/pages/profile/index.html"
+        class="bg-primary-light shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md p-2 text-lg text-white transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-speedometer"></i>
+          <span class="text-lg">داشبورد</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/sefareshHa/index.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-shopping-cart"></i>
+          <span class="text-lg">سفارش ها</span>
+        </div>
+        <div>
+          <span
+            class="grid h-[30px] w-[30px] place-items-center rounded-full bg-red-500 text-white"
+            >10</span
+          >
+        </div>
+      </a>
+      <a
+        href="/pages/profile/clube.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-star"></i>
+          <span class="text-lg">لومکس کلاب</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/comments.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-messages-3"></i>
+          <span class="text-lg">دیدگاه ها</span>
+        </div>
+        <div>
+          <span
+            class="grid h-[30px] w-[30px] place-items-center rounded-full bg-red-500 text-white"
+            >10</span
+          >
+        </div>
+      </a>
+      <a
+        href="/pages/profile/address.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-map"></i>
+          <span class="text-lg">آدرس</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/notifications.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-notification-bing"></i>
+          <span class="text-lg">اعلانات</span>
+        </div>
+        <div>
+          <span
+            class="grid h-[30px] w-[30px] place-items-center rounded-full bg-red-500 text-white"
+            >10</span
+          >
+        </div>
+      </a>
+      <a
+        href="/pages/profile/support"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-support"></i>
+          <span class="text-lg">پشتیبانی</span>
+        </div>
+        <div>
+          <span
+            class="grid h-[30px] w-[30px] place-items-center rounded-full bg-red-500 text-white"
+            >10</span
+          >
+        </div>
+      </a>
+      <a
+        href="/pages/profile/favorite.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-heart-tick"></i>
+          <span class="text-lg">علاقه مندی ها</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/last-view.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-clock"></i>
+          <span class="text-lg">بازدید های اخیر</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/user-info.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-profile-circle"></i>
+          <span class="text-lg">اطلاعات حساب کاربری</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/history-pay.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-receipt-2"></i>
+          <span class="text-lg">تاریخچه تراکنش ها</span>
+        </div>
+      </a>
+      <a
+        href="/pages/profile/software.html"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-emoji-happy"></i>
+          <span class="text-lg">نرم افزار موبایل</span>
+        </div>
+      </a>
+      <a
+        href="#"
+        class="hover:shadow-neomorphism-top-left flex w-full items-center justify-between rounded-md bg-white p-2 text-lg transition-all duration-300"
+      >
+        <div class="flex items-center gap-4">
+          <i class="icon-logout"></i>
+          <span class="text-lg">خروج</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</aside>

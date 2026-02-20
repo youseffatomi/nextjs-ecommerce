@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">علاقه مندی ها</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <section class="mt-5">
+                  <div class="blue-box">
+                    <div
+                      class="blue-box-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 2xl:gap-0"
+                    >
+                      <% [0,0,0,0,0,0,0,0].forEach(()=>{%> <%-
+                      include("./../../components/product-box",{off:false}) %>
+                      <%}) %>
+                    </div>
+                  </div>
+                  <%- include("./../../components/pagination.ejs") %>
+                </section>
+
+                <!-- <%- include("./../../components/pagination.ejs") %> -->
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

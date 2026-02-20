@@ -1,0 +1,118 @@
+<div popup-name="<%= name %>" class="popup-content">
+  <div class="popup-container">
+    <div class="popup-content-box xl:min-w-[700px]">
+      <div class="white-box">
+        <div class="white-box-content">
+          <section>
+            <section tab-name="map">
+              <div
+                class="mb-3 bg-primary-light px-3 py-3 text-xl flex items-center gap-3 rounded-lg"
+              >
+                <img src="/assets/images/icons/location.svg" alt="" />
+                <span class="text-white"> انتخاب از روی نقشه </span>
+              </div>
+
+              <div class="blue-box my-5">
+                <div class="blue-box-content">
+                  <div class="flex flex-col items-stretch gap-5">
+                    <div class="flex flex-col items-stretch gap-5 lg:flex-row">
+                      <div class="white-box md:flex-grow">
+                        <div class="white-box-content flex items-center">
+                          <img
+                            src="/assets/images/icons/search-normal.svg"
+                            alt="x"
+                          />
+                          <input
+                            type="text"
+                            class="flex-row px-2 w-full"
+                            placeholder="جستجو آدرس"
+                          />
+                        </div>
+                      </div>
+
+                      <button
+                        tab-item
+                        tab-target="location-info"
+                        class="btn-main btn-hover bg-primary-dark text-white min-w-[150px]"
+                      >
+                        ثبت نقشه و ادامه
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-sky-100 h-[300px] my-5"></div>
+
+              <div>
+                <button
+                  class="btn-main btn-hover bg-body btn-hover mr-auto"
+                  popup-close="<%= name %>"
+                >
+                  <i class="icon-minus-black"></i>
+                  <span>انصراف</span>
+                </button>
+              </div>
+            </section>
+
+            <section tab-name="location-info" class="hidden">
+              <div
+                class="mb-3 bg-primary-light px-3 py-3 text-xl flex items-center gap-3 rounded-lg"
+              >
+                <img src="/assets/images/icons/location.svg" alt="" />
+                <span class="text-white"> اطلاعات پستی</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                <textarea
+                  class="inp !min-h-[80px] !max-h-[100px] md:col-span-2"
+                  placeholder="نشانی پستی*"
+                ></textarea>
+
+                <input type="text" class="inp" placeholder="استان" />
+                <input type="text" class="inp" placeholder="شهر" />
+                <input type="text" class="inp" placeholder="پلاک" />
+                <input type="text" class="inp" placeholder="واحد" />
+
+                <div class="md:col-span-2">
+                  <input type="text" placeholder="کد پستی" class="inp mb-4" />
+                  <span>کد پستی باید 10 رقم و بدون خط تیره باشد</span>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col items-stretch gap-5 md:flex-row md:items-center md:justify-between"
+              >
+                <button
+                  class="btn-main bg-primary-dark text-white btn-hover"
+                  popup-close="<%= name %>"
+                >
+                  <i class="icon-add-square"></i>
+                  <span>افزودن آدرس</span>
+                </button>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <button
+                    tab-item
+                    tab-target="map"
+                    class="btn-main bg-primary-dark text-white btn-hover"
+                  >
+                    <img src="/assets/images/icons/undo.svg" alt="" />
+                    <span>بازگشت</span>
+                  </button>
+                  <button
+                    class="btn-main btn-hover bg-body btn-hover"
+                    popup-close="<%= name %>"
+                  >
+                    <i class="icon-minus-black"></i>
+                    <span>انصراف</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

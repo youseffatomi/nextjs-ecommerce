@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <div class="mb-5 relative">
+              <img
+                class="absolute top-0 left-[50%] translate-x-[-50%] z-[2] w-[300px] sm:w-[400px] md:w-[500px] xl:w-auto"
+                src="/assets/images/top-blog-slider.svg"
+                alt=""
+              />
+              <h1
+                class="absolute top-[-20px] sm:top-[-15px] xl:top-0 left-[50%] translate-x-[-50%] z-[2] text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-center my-5"
+              >
+                لومکس بلاگ
+              </h1>
+
+              <div
+                class="owl-carousel owl-theme blog-carousel rounded-[50px] overflow-hidden"
+              >
+                <% [0,0,0,0].forEach(e=>{%>
+                <div
+                  class="h-[600px] bg-slate-800 overflow-hidden rounded-[50px]"
+                >
+                  <!-- <img
+                    src="/assets/images/banner.png"
+                    alt="x"
+                    class="absolute top-0 left-0 w-full h-full object-cover z-1"
+                  /> -->
+
+                  <div
+                    class="h-full md:w-8/12 lg:w-6/12 2xl:w-4/12 relative p-5 md:p-10 z-[2] flex flex-col justify-center items-start"
+                  >
+                    <div class="text-yellow-500">
+                      <span class="text-lg md:text-lg"> اینستا 360 </span>
+
+                      <h3 class="text-2xl md:text-5xl font-bold">تایتان 2</h3>
+                    </div>
+
+                    <h2
+                      class="text-4xl md:text-6xl text-white font-bold mb-10 mt-10 md:mt-20"
+                    >
+                      بهتر در تمام زوایا
+                    </h2>
+
+                    <button
+                      class="bg-[#454648] rounded-lg flex items-stretch pl-5 gap-3 overflow-hidden group"
+                    >
+                      <span
+                        class="flex-grow bg-yellow-500 rounded-l-[20px] py-2 pr-2 pl-5 group-hover:bg-yellow-600 transition-all"
+                      >
+                        مشاهده مقاله
+                      </span>
+
+                      <i
+                        class="icon-arrow-left w-[20px] flex items-center text-white"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <%}) %>
+              </div>
+            </div>
+
+            <%- include("./../../components/blog/menu-bar") %>
+
+            <div class="blue-box mt-5">
+              <div class="blue-box-content">
+                <section class="grid grid-cols-1 gap-5 xl:grid-cols-2">
+                  <div class="grid grid-cols-1 gap-5">
+                    <%- include("./../../components/blog/post-box") %> <%-
+                    include("./../../components/blog/post-box") %>
+                  </div>
+                  <div>
+                    <div
+                      class="owl-carousel owl-theme blog-carousel2 rounded-xl overflow-hidden"
+                    >
+                      <% [0,0,0,0].forEach(e=>{%>
+
+                      <a href="#" class="h-[400px] block overflow-hidden">
+                        <img
+                          src="/assets/images/banner.png"
+                          alt=""
+                          class="w-full h-full absolute top-0 left-0 rounded-xl object-cover"
+                        />
+
+                        <h2
+                          class="z-[1] absolute md:bottom-3 bottom-12 text-white right-5 w-9/12 whitespace-nowrap text-ellipsis overflow-hidden"
+                        >
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است
+                        </h2>
+                      </a>
+
+                      <% }) %>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                  <%- include("./../../components/blog/post-box") %> <%-
+                  include("./../../components/blog/post-box") %>
+                  <div class="md:col-span-2">
+                    <%- include("./../../components/blog/post-box") %>
+                  </div>
+                  <%- include("./../../components/blog/post-box") %> <%-
+                  include("./../../components/blog/post-box") %>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

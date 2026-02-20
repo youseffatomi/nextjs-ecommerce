@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../components/layout/head") %>
+  <body>
+    <%- include("./../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <div class="mb-5">
+              <h2 class="text-lg">سبد خرید</h2>
+              <div class="profile-line-gradient"></div>
+            </div>
+
+            <!-- ========= -->
+
+            <div class="blue-box">
+              <div
+                class="blue-box-content grid grid-cols-1 md:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 items-start gap-5"
+              >
+                <section
+                  class="md:col-span-3 xl:col-span-4 2xl:col-span-5 flex flex-col gap-5"
+                >
+                  <% [0,0,0].forEach(e=>{%>
+                  <div class="white-box">
+                    <div
+                      class="white-box-content flex items-center flex-col gap-5 xl:flex-row"
+                    >
+                      <div>
+                        <img
+                          src="/assets//images/11tpro-black-1.png"
+                          class="max-w-[100px]"
+                          alt="x"
+                        />
+                      </div>
+
+                      <div class="flex flex-col gap-5 xl:flex-grow">
+                        <h3>گوشی موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8</h3>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="/assets/images/color.png"
+                            class="w-[30px]"
+                            alt="x"
+                          />
+
+                          <span class="text-sm"> خاکستری کهکشانی </span>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex flex-col-reverse lg:flex-row-reverse lg:w-full xl:w-auto xl:flex-col justify-between items-end min-h-[150px] lg:min-h-[80px] xl:min-h-[150px]"
+                      >
+                        <div class="counter bg-body rounded-lg">
+                          <button add="" class="btn-small text-primary-light">
+                            <i class="icon-add-square"></i>
+                          </button>
+
+                          <input type="number" disabled="" value="2" max="2" />
+                          <span>عدد</span>
+                          <button
+                            class="remove-btn btn-small text-primary-light !max-w-[50px]"
+                          >
+                            <img
+                              src="/assets/images/icons/trash.svg"
+                              class=""
+                              alt=""
+                            />
+                          </button>
+                        </div>
+
+                        <div>
+                          <del class="text-[#8d8d8d] block mb-3">
+                            <span>14,200,000</span>
+                            <span>ریال</span>
+                          </del>
+                          <span class="text-xl">
+                            <span>14,200,000</span>
+                            <span>ریال</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <%}) %>
+                </section>
+                <section
+                  class="md:col-span-2 xl:col-span-2 2xl:col-span-2 flex flex-col gap-5"
+                >
+                  <div class="white-box">
+                    <div class="white-box-content flex flex-col gap-7">
+                      <p class="text-primary-main">
+                        <span>مجموع امتیازات جمع آوری شده با این خرید :</span>
+                        <span>50 امتیاز</span>
+                      </p>
+
+                      <div
+                        class="flex items-center justify-between text-lg lg:text-lg"
+                      >
+                        <span>
+                          <span>قیمت کالا ها</span>
+                          <span>(4)</span>
+                        </span>
+
+                        <span>
+                          <span>13,900,000</span>
+                          <span>تومان</span>
+                        </span>
+                      </div>
+                      <div
+                        class="flex items-center justify-between text-red-500 text-lg lg:text-lg"
+                      >
+                        <span>
+                          <span>مجموع تخفیفات</span>
+                        </span>
+
+                        <span>
+                          <span>900,000</span>
+                          <span>تومان</span>
+                        </span>
+                      </div>
+
+                      <p class="text-sm text-[#a5a5a5]">
+                        هزینه ارسال براساس آدرس، زمان تحویل، وزن و حجم مرسوله
+                        شما محاسبه می‌شود
+                      </p>
+
+                      <button
+                        popup-open="select-address"
+                        class="btn-main btn-hover bg-primary-dark text-white w-full"
+                      >
+                        ادامه
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="white-box">
+                    <div class="white-box-content">
+                      <textarea
+                        class="inp !min-h-[100px]"
+                        placeholder="توضیحات"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="white-box">
+                    <div
+                      class="white-box-content flex flex-col gap-5 items-center xl:flex-row-reverse"
+                    >
+                      <div>
+                        <img
+                          src="/assets/images/truck.png"
+                          class="min-w-[150px]"
+                          alt="x"
+                        />
+                      </div>
+
+                      <span class="text-[#a5a5a5] text-lg text-center">
+                        در خرید های بالا 300 هزار تومان تمامی هزینه ارسال
+                        <span class="text-red-500 font-bold"> رایگان </span>
+                        میباشد
+                      </span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div
+                popup-name="select-address"
+                class="popup-content"
+                style="display: none"
+              >
+                <div class="popup-container">
+                  <div class="popup-content-box md:min-w-[600px]">
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <div
+                          class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                        >
+                          <img src="/assets/images/icons/location.svg" alt="" />
+
+                          <span class="text-white"> انتخاب آدرس </span>
+                        </div>
+
+                        <button
+                          popup-close="select-address"
+                          popup-open="create-address"
+                          class="btn-main btn-hover bg-primary-dark text-white mr-auto my-5"
+                        >
+                          <i class="icon-add-square"></i>
+
+                          <span>افزودن آدرس</span>
+                        </button>
+
+                        <div class="scroll-box">
+                          <div
+                            class="scroll-box-content max-h-[300px] lg:max-h-[600px]"
+                          >
+                            <div class="flex flex-col gap-5 my-5">
+                              <% [0,0].forEach(e=>{%>
+
+                              <div class="blue-box">
+                                <div
+                                  class="blue-box-content flex flex-col gap-5"
+                                >
+                                  <div
+                                    class="flex items-center justify-between"
+                                  >
+                                    <input
+                                      type="radio"
+                                      name="product"
+                                      class="icheck"
+                                    />
+
+                                    <button>
+                                      <img
+                                        src="/assets/images/icons/edit-black.svg"
+                                        alt="x"
+                                      />
+                                    </button>
+                                  </div>
+
+                                  <p class="text-middel">
+                                    خ. ملاصدرا، کوچه ۹ ، ساختمان پویا ، طبقه ۳ ،
+                                    واحد ۴
+                                  </p>
+
+                                  <div
+                                    class="md:flex items-center justify-start gap-20"
+                                  >
+                                    <div
+                                      class="text-[#5a5a5a] flex items-center gap-3 mb-3 mt-5"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/signpost.svg"
+                                        alt="x"
+                                      />
+                                      <span>شیراز</span>
+                                    </div>
+
+                                    <div
+                                      class="text-[#5a5a5a] flex items-center gap-3"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/sms-tracking.svg"
+                                        alt="x"
+                                      />
+                                      <span>234345645645</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <% }) %>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-5"
+                        >
+                          <button
+                            popup-close="select-address"
+                            popup-open="resiver-info"
+                            class="btn-hover min-w-[150px] flex-grow btn-main bg-primary-dark text-white lg:col-span-2"
+                          >
+                            <img
+                              src="/assets/images/icons/tick-square.svg"
+                              alt="0"
+                            />
+                            <span> تایید آدرس</span>
+                          </button>
+
+                          <button
+                            class="btn-main min-w-[150px] bg-body text-black"
+                            popup-close="select-address"
+                          >
+                            <img
+                              src="/assets/images/icons/undo-black.svg"
+                              alt="0"
+                            />
+                            <span> بازگشت</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <%-
+              include("./../components/profile/create-address",{name:"create-address"})
+              %>
+              <!--  -->
+              <div
+                popup-name="resiver-info"
+                class="popup-content"
+                style="display: none"
+              >
+                <div class="popup-container">
+                  <div class="popup-content-box md:min-w-[600px]">
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <div class="scroll-box">
+                          <div
+                            class="scroll-box-content max-h-[300px] md:max-h-[500px] lg:max-h-[600px]"
+                          >
+                            <div
+                              class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                            >
+                              <img
+                                src="/assets/images/icons/personalcard.svg"
+                                alt=""
+                              />
+
+                              <span class="text-white"> اطلاعات گیرنده </span>
+                            </div>
+
+                            <div class="blue-box ml-auto max-w-[250px] my-5">
+                              <div class="px-3 py-2 flex items-center gap-3">
+                                <input type="checkbox" class="icheck" />
+                                <span> گیرنده سفارش خودم هستم </span>
+                              </div>
+                            </div>
+
+                            <div
+                              class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5"
+                            >
+                              <input
+                                type="text"
+                                class="inp"
+                                placeholder="*نام گیرنده"
+                              />
+                              <input
+                                type="text"
+                                class="inp"
+                                placeholder="*نام خانوادگی گیرنده"
+                              />
+                              <input
+                                type="text"
+                                class="inp"
+                                placeholder="*شماره موبایل گیرنده"
+                              />
+                              <input
+                                type="text"
+                                class="inp"
+                                placeholder="*کد ملی گیرنده"
+                              />
+                            </div>
+
+                            <div
+                              class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                            >
+                              <img
+                                src="/assets/images/icons/personalcard.svg"
+                                alt=""
+                              />
+
+                              <span class="text-white">
+                                انتخاب از لیست گیرنده های قبلی
+                              </span>
+                            </div>
+
+                            <div
+                              class="grid grid-cols-1 md:grid-cols-2 gap-5 my-5"
+                            >
+                              <% [0,0,0,0].forEach((e,index)=>{%>
+
+                              <div class="blue-box">
+                                <div
+                                  class="blue-box-content grid grid-cols-1 gap-5"
+                                >
+                                  <div class="flex items-center gap-3">
+                                    <img
+                                      src="/assets/images/icons/personalcard-black.svg"
+                                      alt="x"
+                                    />
+
+                                    <span> یوسف فاطومی </span>
+                                  </div>
+                                  <div class="flex items-center gap-3">
+                                    <img
+                                      src="/assets/images/icons/phone.svg"
+                                      alt="x"
+                                    />
+
+                                    <span> 09361561007 </span>
+                                  </div>
+
+                                  <!-- 
+                                    وقتی روی این دکمه کلید بشه توی پاپ آپ بعدش ک باز میشه  یک مقدار توی دکمه ست میشه
+                                   -->
+                                  <button
+                                    onclick="document.querySelector('.btn-delete-resiver').setAttribute('data','<%- index %>')"
+                                    popup-open="delete-resiver"
+                                    class="btn-main bg-red-100 text-red-500 w-full hover:bg-red-200 transition-all"
+                                  >
+                                    <img
+                                      src="/assets/images/icons/trash.svg"
+                                      alt="x"
+                                    />
+
+                                    <span> حذف گیرنده از لیست </span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <%}) %>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-5"
+                        >
+                          <button
+                            popup-open="finish"
+                            popup-close="resiver-info"
+                            class="btn-hover min-w-[150px] flex-grow btn-main bg-primary-dark text-white lg:col-span-2"
+                          >
+                            <img
+                              src="/assets/images/icons/tick-square.svg"
+                              alt="0"
+                            />
+                            <span> تایید گیرنده</span>
+                          </button>
+
+                          <button
+                            class="btn-main min-w-[150px] bg-body text-black"
+                            popup-open="select-address"
+                            popup-close="resiver-info"
+                          >
+                            <img
+                              src="/assets/images/icons/undo-black.svg"
+                              alt="0"
+                            />
+                            <span> بازگشت</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div popup-name="delete-resiver" class="popup-content">
+                <div class="popup-container">
+                  <div class="popup-content-box grid place-items-center">
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <p class="text-center mb-10">
+                          آیا از حذف این گیرنده اطمینان دارید؟
+                        </p>
+
+                        <div
+                          class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 mx-auto md:w-[400px]"
+                        >
+                          <button
+                            popup-close="delete-resiver"
+                            class="btn-main btn-hover bg-primary-dark text-white"
+                          >
+                            <img src="/assets/images/icons/undo.svg" alt="x" />
+
+                            <span>برسی مجدد</span>
+                          </button>
+
+                          <button
+                            data=""
+                            popup-close="delete-resiver"
+                            class="btn-delete-resiver btn-main bg-[#EFF1F1] text-red-600"
+                          >
+                            <img src="/assets/images/icons/trash.svg" />
+                            <span>بله اطمینان دارم</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div
+                popup-name="finish"
+                class="popup-content"
+                style="display: none"
+              >
+                <div class="popup-container">
+                  <div class="popup-content-box md:min-w-[700px]">
+                    <div class="white-box">
+                      <div class="white-box-content">
+                        <div class="scroll-box">
+                          <div
+                            class="scroll-box-content max-h-[550px] md:max-h-[500px] lg:max-h-[600px]"
+                          >
+                            <div
+                              class="bg-primary-light py-4 px-2 rounded-lg my-1 flex items-center gap-3"
+                            >
+                              <img
+                                src="/assets/images/icons/money-recive.svg"
+                                alt=""
+                              />
+
+                              <span class="text-white">
+                                بررسی قبل از پرداخت
+                              </span>
+                            </div>
+
+                            <div class="blue-box my-5">
+                              <div class="blue-box-content">
+                                <div class="white-box">
+                                  <div
+                                    class="white-box-content flex flex-col gap-7"
+                                  >
+                                    <p class="text-primary-main">
+                                      <span
+                                        >مجموع امتیازات جمع آوری شده با این خرید
+                                        :</span
+                                      >
+                                      <span>50 امتیاز</span>
+                                    </p>
+
+                                    <div
+                                      class="flex items-center justify-between text-lg lg:text-lg"
+                                    >
+                                      <span>
+                                        <span>قیمت کالا ها</span>
+                                        <span>(4)</span>
+                                      </span>
+
+                                      <span>
+                                        <span>13,900,000</span>
+                                        <span>تومان</span>
+                                      </span>
+                                    </div>
+
+                                    <div
+                                      class="flex items-center justify-between text-red-500 text-lg lg:text-lg"
+                                    >
+                                      <span>
+                                        <span>مجموع تخفیفات</span>
+                                      </span>
+
+                                      <span>
+                                        <span>900,000</span>
+                                        <span>تومان</span>
+                                      </span>
+                                    </div>
+
+                                    <div
+                                      class="flex items-center justify-between text-lg lg:text-lg"
+                                    >
+                                      <span>
+                                        <span>هزینه ارسال</span>
+                                        <span class="text-sm text-[#a5a5a5]"
+                                          >ارسال با وانت بار</span
+                                        >
+                                      </span>
+
+                                      <span>
+                                        <span>900,000</span>
+                                        <span>تومان</span>
+                                      </span>
+                                    </div>
+
+                                    <div class="blue-box">
+                                      <div class="blue-box-content">
+                                        <div
+                                          class="flex flex-col gap-5 md:flex-row items-center justify-between text-xl lg:text-lg"
+                                        >
+                                          <span>
+                                            <span>مبلغ قابل پرداخت:</span>
+                                          </span>
+
+                                          <span>
+                                            <span>900,000</span>
+                                            <span>تومان</span>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="flex flex-col md:flex-row justify-between gap-5"
+                                    >
+                                      <a
+                                        class="btn-hover min-w-[150px] flex-grow btn-main bg-primary-dark text-white lg:col-span-2"
+                                      >
+                                        <span> پرداخت</span>
+                                      </a>
+
+                                      <button
+                                        class="btn-main min-w-[150px] bg-body text-black"
+                                        popup-open="resiver-info"
+                                        popup-close="finish"
+                                      >
+                                        <img
+                                          src="/assets/images/icons/undo-black.svg"
+                                          alt="0"
+                                        />
+                                        <span> بازگشت</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <span class="block my-5"> لیست کالا ها </span>
+
+                                <section
+                                  class="md:col-span-3 xl:col-span-4 2xl:col-span-5 flex flex-col gap-5"
+                                >
+                                  <% [0,0,0].forEach(e=>{%>
+                                  <div class="white-box">
+                                    <div
+                                      class="white-box-content flex items-center flex-col gap-5 xl:flex-row"
+                                    >
+                                      <div>
+                                        <img
+                                          src="/assets//images/11tpro-black-1.png"
+                                          class="max-w-[100px]"
+                                          alt="x"
+                                        />
+                                      </div>
+
+                                      <div
+                                        class="flex flex-col gap-5 xl:flex-grow"
+                                      >
+                                        <h3>
+                                          گوشی موبایل شیائومی 11t pro 5g ظرفیت
+                                          256 رم 8
+                                        </h3>
+
+                                        <div class="flex items-center gap-2">
+                                          <img
+                                            src="/assets/images/color.png"
+                                            class="w-[30px]"
+                                            alt="x"
+                                          />
+
+                                          <span class="text-sm">
+                                            خاکستری کهکشانی
+                                          </span>
+                                        </div>
+                                      </div>
+
+                                      <div>
+                                        <span class="text-lg">
+                                          <span>14,200,000</span>
+                                          <span>ریال</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <%}) %>
+                                </section>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./../components/layout/footer.ejs") %>
+  </body>
+</html>

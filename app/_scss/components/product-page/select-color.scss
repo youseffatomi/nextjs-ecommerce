@@ -1,0 +1,29 @@
+.select-color {
+  @apply flex items-stretch  bg-white  rounded-md overflow-hidden;
+
+  &-btns {
+    @apply flex items-center flex-grow px-2 gap-2;
+  }
+}
+
+button.select-color-btn {
+  @apply w-7 h-7 rounded-lg flex justify-between items-stretch overflow-hidden;
+  div {
+    @apply w-6/12;
+  }
+
+  &.active {
+    border: 1px solid white;
+    outline: 2px solid;
+    position: relative;
+    @apply outline-primary-main;
+    &::after {
+      content: url("/assets/images/icons/check.svg");
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

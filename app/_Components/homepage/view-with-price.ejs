@@ -1,0 +1,25 @@
+<section class="container">
+  <div class="white-box flex flex-col lg:flex-row items-stretch">
+    <h2
+      class="bg-primary-main text-white text-lg grid place-items-center px-5 py-10 text-center lg:max-w-[200px] rounded-bl-[40px] lg:rounded-bl-[0px] lg:rounded-tl-[40px]"
+    >
+      انتخاب موبایل بر اساس قیمت
+    </h2>
+
+    <div
+      class="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 white-box-content xl:pr-20"
+    >
+      <% [0,0,0,0,0,0,0].forEach(()=>{%>
+      <div class="p-1">
+        <a
+          href="#"
+          class="flex flex-col items-center bg-primary-dark text-white p-4 hover:bg-primary-light hover:shadow-neomorphism-top-left transition-all duration-300 rounded-md"
+        >
+          <strong class="font-bold text-[24px]"> زیر 3 </strong>
+          <span class="text-[18] text-center"> میلیون تومان </span>
+        </a>
+      </div>
+      <%}) %>
+    </div>
+  </div>
+</section>

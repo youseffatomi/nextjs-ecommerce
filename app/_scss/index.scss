@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+/* 
+@import "./components";
+@import "./utils"; */
+@theme {
+  --color-primary-dark: #003e43;
+  --color-primary-main: #00838f;
+  --color-primary-light: #4fb3bf;
+  --color-text-white: #f9fcfd;
+  --color-dark: #545456;
+  --color-gray: #454648;
+  --color-body: #dbeef6;
+  --color-white: #ffffff;
+  --color-stroke: #717c94;
+  --color-start: linear-gradient(#ffda1c, #feb705);
+  --color-plyr-color-main: #4fb3bf;
+}
+html {
+  direction: rtl;
+}
+
+body {
+  @apply bg-body max-w-[100vw] overflow-x-hidden text-base text-black;
+}
+
+main {
+  min-height: 100vh;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+/*
+.homepageSlider .splide__slide {
+  @apply h-screen w-screen lg:max-h-[900px];
+}
+.owl-carousel {
+  position: relative;
+  &:hover {
+    .owl-next {
+      @apply left-[100%] translate-x-[-29px];
+    }
+    .owl-prev {
+      @apply left-[0%];
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    @apply absolute top-[50%] translate-x-[-50%] translate-y-[-50%] transition-all duration-300;
+    div {
+      @apply bg-body! flex h-[50px] w-[40px] items-center justify-end p-2;
+      i {
+        @apply text-primary-main bg-body border-primary-main grid h-[20px] w-[20px] place-items-center rounded-full border-2 border-solid text-[13px] font-bold;
+      }
+      &:hover {
+        @apply bg-body! text-primary-main!;
+      }
+    }
+  }
+  .owl-next {
+    @apply left-[calc(100%-(-40px))];
+    div {
+      @apply rotate-180 rounded-r-full;
+    }
+  }
+  .owl-prev {
+    @apply left-[-40px];
+    div {
+      @apply rounded-r-full;
+    }
+  }
+
+  .owl-nav button:hover {
+    background-color: unset !important;
+  }
+} */
+
+/* =================== */
+/* 
+.favorite-profile-btn {
+  @apply btn-main bg-primary-dark text-white transition-all;
+  &.active {
+    @apply text-dark shadow-neomorphism-top-left bg-white;
+  }
+} */
+
+/* ================== */
+/* .shaba {
+  input {
+    @apply rounded-md p-3 text-center;
+  }
+} */
+
+/* ======================= */
+/* .D43fFA {
+  a {
+    &.active {
+      @apply shadow-neomorphism-top-left bg-primary-light text-white;
+      i {
+        @apply text-white;
+      }
+    }
+  }
+} */

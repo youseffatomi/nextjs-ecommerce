@@ -1,0 +1,9 @@
+[copy-target] {
+  position: relative;
+  &.active {
+    &::after {
+      content: url("/assets/images/icons/Tooltip.svg");
+      @apply absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-20%] scale-90;
+    }
+  }
+}

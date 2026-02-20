@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">آدرس ها</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <button
+                  popup-open="add-address"
+                  class="w-full btn-main btn-hover bg-primary-dark text-white"
+                >
+                  <i class="icon-add-square"></i>
+                  <span> افزودن آدرس جدید </span>
+                </button>
+                <%-
+                include("./../../components/profile/create-address",{name:"add-address"})
+                %>
+
+                <div class="blue-box mt-5">
+                  <div class="blue-box-content">
+                    <div class="grid grid-col-1 gap-5">
+                      <% [0,0,0,0].forEach((e,index)=>{%>
+
+                      <div class="white-box">
+                        <div class="white-box-content">
+                          <div class="grid grid-cols-1 xl:grid-cols-4 gap-5">
+                            <div class="xl:col-span-3 flex items-center">
+                              <div>
+                                <p class="font-medium">
+                                  خ. ملاصدرا، کوچه ۹ ، ساختمان پویا ، طبقه ۳ ،
+                                  واحد ۴
+                                </p>
+
+                                <div
+                                  class="text-[#5a5a5a] flex items-center gap-3 mb-3 mt-5"
+                                >
+                                  <img
+                                    src="/assets/images/icons/signpost.svg"
+                                    alt="x"
+                                  />
+                                  <span>شیراز</span>
+                                </div>
+
+                                <div
+                                  class="text-[#5a5a5a] flex items-center gap-3"
+                                >
+                                  <img
+                                    src="/assets/images/icons/sms-tracking.svg"
+                                    alt="x"
+                                  />
+                                  <span>234345645645</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="bg-sky-100 h-[120px]"></div>
+                              <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3"
+                              >
+                                <button
+                                  popup-open="create-address<%= index  %>"
+                                  class="btn-main btn-hover bg-primary-dark text-white"
+                                >
+                                  <img
+                                    src="/assets/images/icons/edit-white.svg"
+                                    alt="x"
+                                  />
+
+                                  <span>ویرایش</span>
+                                </button>
+
+                                <button
+                                  popup-open="delete-address-<%= index %>"
+                                  class="btn-main bg-[#EFF1F1] text-red-600"
+                                >
+                                  <img src="/assets/images/icons/trash.svg" />
+                                  <span>حذف</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <%-
+                        include("./../../components/profile/create-address",{name:"create-address"+index})
+                        %>
+                        <div
+                          popup-name="delete-address-<%= index %>"
+                          class="popup-content"
+                        >
+                          <div class="popup-container">
+                            <div
+                              class="popup-content-box grid place-items-center"
+                            >
+                              <div class="white-box">
+                                <div class="white-box-content">
+                                  <p class="text-center mb-10">
+                                    آیا از حذف این آدرس اطمینان دارید؟
+                                  </p>
+
+                                  <div
+                                    class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 mx-auto md:w-[400px]"
+                                  >
+                                    <button
+                                      popup-close="delete-address-<%= index  %>"
+                                      class="btn-main btn-hover bg-primary-dark text-white"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/undo.svg"
+                                        alt="x"
+                                      />
+
+                                      <span>برسی مجدد</span>
+                                    </button>
+
+                                    <button
+                                      popup-close="delete-address-<%= index  %>"
+                                      class="btn-main bg-[#EFF1F1] text-red-600"
+                                    >
+                                      <img
+                                        src="/assets/images/icons/trash.svg"
+                                      />
+                                      <span>بله اطمینان دارم</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <% }) %>
+                    </div>
+                  </div>
+                </div>
+
+                <%- include("./../../components/pagination.ejs") %>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

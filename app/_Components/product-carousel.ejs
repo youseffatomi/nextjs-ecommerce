@@ -1,0 +1,27 @@
+<section>
+  <div class="container py-7">
+    <div class="white-box overflow-hidden relative">
+      <img
+        src="/assets/images/product-carousel-shape2.svg"
+        class="absolute top-[-121px] md:top-[-100px] left-[-151px] md:left-[-187px] lg:left-[-160px] max-w-[366px] md:max-w-[500px] lg:max-w-[400px] rotate-180"
+      />
+      <img
+        src="/assets/images/product-carousel-shape2.svg"
+        class="absolute bottom-[-83px] md:bottom-[-107px] right-[-126px] md:right-[-195px] max-w-[318px] md:max-w-[500px] lg:right-[-100px] lg:max-w-[350px]"
+      />
+      <div class="title">
+        <h2>پر فروش ترین ها</h2>
+        <a href="#" class="see-all">
+          <span> مشاهده همه </span>
+          <i class="icon-arrow-left"></i>
+        </a>
+      </div>
+      <div class="white-box-content">
+        <div class="owl-carousel owl-theme product-carousel">
+          <% [0,0,0,0,0,0,0,0,0,0,0].forEach(e=>{%> <%-
+          include("./product-box",{off:false}) %> <%}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

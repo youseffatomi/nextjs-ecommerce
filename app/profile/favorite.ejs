@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <%- include("./../../components/layout/head") %>
+  <body>
+    <%- include("./../../components/layout/header/index") %>
+    <!--  -->
+    <main class="min-h-screen">
+      <div class="container">
+        <div class="white-box">
+          <div class="white-box-content pt-[130px]">
+            <section
+              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5"
+            >
+              <%- include("./../../components/profile/sidebar") %>
+
+              <article class="md:col-span-2 xl:col-span-3">
+                <div class="mb-5">
+                  <h2 class="text-lg">علاقه مندی ها</h2>
+                  <div class="profile-line-gradient"></div>
+                </div>
+
+                <section class="mt-5">
+                  <div class="blue-box">
+                    <div class="blue-box-content grid grid-cols-1 gap-5">
+                      <% [0,0,0,0,0,0,0,0].forEach(()=>{%>
+                      <div class="white-box">
+                        <div class="white-box-content">
+                          <div
+                            class="flex flex-col xl:flex-row xl:text-right xl:items-center text-center lg:text-right gap-3"
+                          >
+                            <div>
+                              <button
+                                value="1"
+                                class="favorite-profile-btn btn-hover btn-main bg-primary-dark text-white"
+                              >
+                                <i class="icon-heart-tick"></i>
+                              </button>
+                            </div>
+                            <div class="xl:w-1/12">
+                              <img
+                                src="/assets/images/11tpro-black-1.png"
+                                alt="x"
+                                class="lg:w-[60px] w-[130px] mx-auto"
+                              />
+                            </div>
+
+                            <h3
+                              class="whitespace-nowrap text-ellipsis overflow-hidden xl:w-6/12"
+                            >
+                              گوشی موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8گوشی
+                              موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8گوشی
+                              موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8گوشی
+                              موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8گوشی
+                              موبایل شیائومی 11t pro 5g ظرفیت 256 رم 8
+                            </h3>
+
+                            <div class="flex flex-col gap-2 xl:w-2/12">
+                              <del class="text-sm">تومان 14,200,000</del>
+                              <span class="text-lg text-primary-light"
+                                >تومان 13,900,000</span
+                              >
+                            </div>
+                            <div class="xl:w-[160px]">
+                              <a
+                                href="#"
+                                class="mx-auto btn-hover lg:w-full btn-small text-white bg-primary-dark"
+                              >
+                                <i class="icon-add-square"></i>
+                                <span> اضافه به سبد خرید </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <%}) %>
+                    </div>
+                  </div>
+                  <%- include("./../../components/pagination.ejs") %>
+                </section>
+
+                <!-- <%- include("./../../components/pagination.ejs") %> -->
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  -->
+    <%- include("./../../components/layout/footer.ejs") %>
+  </body>
+</html>

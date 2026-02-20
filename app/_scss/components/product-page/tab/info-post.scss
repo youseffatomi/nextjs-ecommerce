@@ -1,0 +1,13 @@
+.info-tab-post {
+  @apply relative h-[300px] overflow-hidden rounded-lg lg:h-[200px];
+
+  .tag {
+    @apply bg-primary-main absolute top-0 right-0 rounded-bl-full px-6 py-1 text-[18px] text-white;
+  }
+  &-img {
+    @apply h-full w-full object-cover;
+  }
+  h3 {
+    @apply absolute right-0 bottom-0 w-full overflow-hidden bg-[rgba(0,0,0,0.5)] px-3 py-4 text-sm text-ellipsis whitespace-nowrap text-white md:text-base;
+  }
+}

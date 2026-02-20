@@ -1,0 +1,24 @@
+.price-range {
+  direction: ltr !important;
+
+  #price-range-container {
+    @apply bg-dark rounded-full;
+    border: none;
+    .ui-slider-range {
+      background: linear-gradient(98.28deg, #ffda1c 6.35%, #fe5f05 92.66%);
+      border: none;
+    }
+    .ui-slider-handle {
+      @apply rounded-full border-none;
+      top: 50%;
+      transform: translateY(-50%) scale(1.1);
+
+      &:nth-child(2) {
+        background: #ffda1c;
+      }
+      &:nth-child(3) {
+        background: #fe5f05;
+      }
+    }
+  }
+}
