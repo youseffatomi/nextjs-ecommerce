@@ -102,7 +102,7 @@ export default function LoginRegisterModal({
                     onChange={FormikPhone.handleChange}
                     value={FormikPhone.values.password}
                     maxLength={11}
-                    type="text"
+                    type="password"
                     className="inpPhoneNumber px-3 font-light"
                   />
                 </div>
