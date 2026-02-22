@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Search from "./search";
@@ -6,8 +7,21 @@ import LoginRegisterModal from "./login-register-modal";
 import Menu from "@/app/_assets/images/menu.svg";
 import ShoppingCart from "@/app/_assets/images/shopping-cart.svg";
 import Scale2 from "@/app/_assets/images/scale 2.svg";
+import { useState } from "react";
 
 export default function Header() {
+  const MoreLinks = [
+    { label: "گوشی موبایل", href: "#" },
+    { label: "لپتاپ", href: "#" },
+    { label: "تبلت", href: "#" },
+    { label: "هدفون و هندزفری", href: "#" },
+    { label: "صوتی و تصویری", href: "#" },
+    { label: "ساعت هوشمند", href: "#" },
+    { label: "لوازم بازی", href: "#" },
+    { label: "لوازم جانبی", href: "#" },
+  ];
+
+  const [openAuthModal, setOpenAuthModal] = useState(false);
   return (
     <header className="fixed top-0 left-0 z-[20] w-full">
       <nav className="bg-primary-dark relative w-full py-2">
@@ -31,53 +45,28 @@ export default function Header() {
             </div>
 
             <div className="flex-grow md:flex-grow-0">
-              <h1 className="text-primary-main text-center text-3xl font-bold">
-                لوگـــــــــو
+              <h1 className="text-primary-main grid place-items-center text-3xl font-bold">
+                <Image
+                  src="/assets/images/logo.svg"
+                  alt=""
+                  width={60}
+                  height={60}
+                />
               </h1>
             </div>
 
             <div className="order-3 hidden flex-grow px-4 xl:block">
               <ul className="flex items-center justify-center gap-3">
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    گوشی موبایل
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    لپتاپ
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    تبلت
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    هدفون و هندزفری
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    صوتی و تصویری
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    ساعت هوشمند
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    لوازم بازی
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-[15px] text-white" href="#">
-                    لوازم جانبی
-                  </Link>
-                </li>
+                {MoreLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="hover:text-primary text-[15px] text-white transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -88,7 +77,10 @@ export default function Header() {
               <Link href="#">
                 <Image src={Scale2} alt="shoping-card" width={30} />
               </Link>
-              <button className="open-register-login-modal hover:bg-primary-main hidden items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex">
+              <button
+                onClick={() => setOpenAuthModal(true)}
+                className="hover:bg-primary-main hidden items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex"
+              >
                 <i className="icon-user"></i>
                 <span className="text-lg">حساب کاربری</span>
               </button>
@@ -99,8 +91,7 @@ export default function Header() {
         <Search />
         <MobileMenu />
       </nav>
-
-      <LoginRegisterModal />
+      {openAuthModal && <LoginRegisterModal {...{ setOpenAuthModal }} />}
     </header>
   );
 }

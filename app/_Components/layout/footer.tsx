@@ -3,11 +3,43 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const data = {
+    copyRight: "تمامی حقوق برای سایت فلکسو محفوظ است",
+    address: "تست تست تست",
+    phone: "091200000",
+    cols: [
+      {
+        title: "تست تست",
+        links: [
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+        ],
+      },
+      {
+        title: "تست تست",
+        links: [
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+        ],
+      },
+      {
+        title: "تست تست",
+        links: [
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+          { title: "تست تست", link: "" },
+        ],
+      },
+    ],
+  };
+
   return (
     <footer className="bg-primary-dark relative mt-20 pt-5 pb-5">
       <div className="">
         <div className="bg-body absolute top-0 left-1/2 mx-auto grid h-[55px] w-8/12 -translate-x-1/2 place-items-center text-center text-[13px] md:w-6/12 lg:w-5/12 xl:w-[600px]">
-          تمام حقوق این وبسایت متعلق به شرکت زرین فناوران میباشد
+          <span>{data.copyRight}</span>
           <div className="absolute top-0 -right-[69px] h-[55px] w-[70px] rotate-y-180 bg-[url('/assets/images/footer.svg')] bg-cover bg-no-repeat"></div>
           <div className="absolute top-0 -left-[69px] h-[55px] w-[70px] bg-[url('/assets/images/footer.svg')] bg-cover bg-no-repeat"></div>
         </div>
@@ -16,49 +48,37 @@ export default function Footer() {
       <div className="container mx-auto mt-20 lg:mt-0">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-7 lg:gap-10">
           <div className="lg:col-span-2">
-            <h1 className="text-primary-main text-[40px] font-bold">لوگو</h1>
+            <h1 className="text-primary-main text-[40px] font-bold">
+              <Image
+                src="/assets/images/logo.svg"
+                alt=""
+                width={100}
+                height={100}
+              />
+            </h1>
 
             <p className="mt-5 text-base font-medium text-white">آدرس</p>
             <div className="mt-3 flex flex-col gap-3 text-base text-white opacity-80">
-              <p>شیراز - ملاصدرا - کوچه 9 - ساختمان پویا - واحد 4</p>
-              <p>کد پستی : 777777777</p>
-              <p>شماره تماس : 3636666-071</p>
+              <p>{data.address}</p>
+
+              <p>شماره تماس : {data.phone}</p>
             </div>
           </div>
           <div className="grid grid-cols-1 justify-center gap-7 md:grid-cols-3 lg:col-span-4 lg:mt-20">
-            <div className="flex flex-col gap-2">
-              <h4 className="text-lg font-bold text-white">مهم های فروشگاه</h4>
-              <Link href="#" className="text-base text-white opacity-80">
-                درباره ما
-              </Link>
-              <Link href="#" className="text-base text-white opacity-80">
-                قوانین و مقررات
-              </Link>
-              <Link href="#" className="text-base text-white opacity-80">
-                حریم خصوصی کاربران
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-lg font-bold text-white">پیش از خرید</h4>
-              <Link href="#" className="text-base text-white opacity-80">
-                راهنمای خرید
-              </Link>
-              <Link href="#" className="text-base text-white opacity-80">
-                ضمانت 7 روزه ماا
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-lg font-bold text-white">پس از خرید</h4>
-              <Link href="#" className="text-base text-white opacity-80">
-                تضمین رجیستری
-              </Link>
-              <Link href="#" className="text-base text-white opacity-80">
-                رویه بازگرداندن کالا
-              </Link>
-              <Link href="#" className="text-base text-white opacity-80">
-                رهگیری آنلاین سفارشات
-              </Link>
-            </div>
+            {data.cols.map((C, index) => (
+              <div className="flex flex-col gap-2" key={index}>
+                <h4 className="text-lg font-bold text-white">{C.title}</h4>
+                {C.links.map((L, I) => (
+                  <Link
+                    href={L.link}
+                    key={I}
+                    className="text-base text-white opacity-80"
+                  >
+                    {L.title}
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
           <div className="col-span-1">
             <div className="col-span-1 grid grid-cols-2 items-center gap-3 md:grid-cols-4 lg:grid-cols-2">

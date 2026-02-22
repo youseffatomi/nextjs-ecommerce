@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "flowbite-react": "^0.12.4",
+    "formik": "^2.4.9",
     "next": "^15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "sass": "^1.97.3"
+    "sass": "^1.97.3",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

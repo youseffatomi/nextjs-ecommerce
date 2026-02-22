@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "flowbite-react/plugin/tailwindcss";
 @source "../../.flowbite-react/class-list.json";
+@import "./font.scss";
+
 /* 
 @import "./components";
 @import "./utils"; */
@@ -19,6 +21,7 @@
 }
 html {
   direction: rtl;
+  font-family: KalamehWeb;
 }
 
 body {
