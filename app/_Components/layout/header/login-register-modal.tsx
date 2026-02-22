@@ -1,10 +1,12 @@
 "use clint";
 import Image from "next/image";
-import { SetStateAction, useState } from "react";
+import { SetStateAction } from "react";
 import Button from "@/app/_Components/Form/Button/index";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { signIn } from "next-auth/react";
+import toast from "react-hot-toast";
 
 export default function LoginRegisterModal({
   setOpenAuthModal,
@@ -18,10 +20,26 @@ export default function LoginRegisterModal({
       username: Yup.string().required("نام کاربری الزامی است"),
       password: Yup.string().required("کلمه عبور الزامی است"),
     }),
-    validateOnChange: true,
+    validateOnChange: false,
     validateOnBlur: false,
 
-    onSubmit() {},
+    async onSubmit(values, { validateForm }) {
+      validateForm(values);
+
+      const res = await signIn("credentials", {
+        ...values,
+        redirect: false,
+      });
+
+      if (res?.error) {
+        FormikPhone.errors.username = "نام کاربری اشتباه است";
+        FormikPhone.errors.password = "رمز عبور اشتباه است";
+      }
+
+      if (res?.ok) {
+        toast.success("با موفقیت وارد شدید");
+      }
+    },
   });
 
   return (

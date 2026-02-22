@@ -32,8 +32,6 @@ export default function Button({
       break;
   }
 
-  console.log(props);
-
   return (
     <button
       {...{ ...props }}

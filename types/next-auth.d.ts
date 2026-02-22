@@ -4,20 +4,15 @@ import { DefaultJWT } from "next-auth/jwt";
 
 declare module "next-auth" {
   interface User extends DefaultUser {
-    id?: string; // معمولاً string
-    username?: string;
-    accessToken?: string; // ← optional کن مهم
-    refreshToken?: string;
-    // role?: string;
-    // هر فیلد دیگه‌ای که می‌خوای
+    user_nicename?: string;
+    token?: string;
   }
 
   interface Session {
-    accessToken?: string;
+    token?: string;
     user?: {
-      id?: string; // معمولاً اجباری می‌کنن
-      username?: string;
-      accessToken?: string; // ← اینجا اضافه کن
+      user_nicename?: string;
+      token?: string;
       // role?: string;
     } & DefaultSession["user"];
   }
@@ -25,10 +20,7 @@ declare module "next-auth" {
 
 declare module "next-auth/jwt" {
   interface JWT extends DefaultJWT {
-    accessToken?: string;
-    refreshToken?: string;
-    username?: string;
-    // role?: string;
-    // accessTokenExp?: number;  ← اگه expiration داری
+    token?: string;
+    user_nicename?: string;
   }
 }

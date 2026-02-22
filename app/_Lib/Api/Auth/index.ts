@@ -21,7 +21,7 @@ export const Login = async (
   username: string,
   password: string,
 ): Promise<AxiosResponse<RESPONSE>> => {
-  const res: AxiosResponse<RESPONSE> = await AuthAPI.post("auth/login", {
+  const res: AxiosResponse<RESPONSE> = await AuthAPI.post("", {
     username,
     password,
     expiresInMins: 20,
@@ -29,8 +29,6 @@ export const Login = async (
 
   return res;
 };
-
-export const GetClientToken = () => useSession()?.data?.accessToken;
 
 export const GetServerToken = async () => {
   const session = await getServerSession(authOptions);

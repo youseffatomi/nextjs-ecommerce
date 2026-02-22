@@ -8,6 +8,8 @@ import Menu from "@/app/_assets/images/menu.svg";
 import ShoppingCart from "@/app/_assets/images/shopping-cart.svg";
 import Scale2 from "@/app/_assets/images/scale 2.svg";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const MoreLinks = [
@@ -20,6 +22,10 @@ export default function Header() {
     { label: "لوازم بازی", href: "#" },
     { label: "لوازم جانبی", href: "#" },
   ];
+  const Router = useRouter();
+
+  const Session = useSession();
+  console.log(Session);
 
   const [openAuthModal, setOpenAuthModal] = useState(false);
   return (
@@ -78,11 +84,16 @@ export default function Header() {
                 <Image src={Scale2} alt="shoping-card" width={30} />
               </Link>
               <button
-                onClick={() => setOpenAuthModal(true)}
-                className="hover:bg-primary-main hidden items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex"
+                onClick={() => {
+                  if (Session.status == "authenticated") Router.push("panel");
+                  else setOpenAuthModal(true);
+                }}
+                className="hover:bg-primary-main hidden cursor-pointer items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex"
               >
                 <i className="icon-user"></i>
-                <span className="text-lg">حساب کاربری</span>
+                <span className="text-lg">
+                  {Session.status == "unauthenticated" ? "ورود" : "حساب کاربری"}
+                </span>
               </button>
             </div>
           </div>
@@ -91,7 +102,9 @@ export default function Header() {
         <Search />
         <MobileMenu />
       </nav>
-      {openAuthModal && <LoginRegisterModal {...{ setOpenAuthModal }} />}
+      {Session.status == "unauthenticated" && openAuthModal && (
+        <LoginRegisterModal {...{ setOpenAuthModal }} />
+      )}
     </header>
   );
 }
