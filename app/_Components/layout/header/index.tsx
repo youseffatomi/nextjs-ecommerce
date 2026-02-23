@@ -2,11 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Search from "./search";
-import MobileMenu from "./mobile-menu";
+import { MenuDesktop, MenuMobile } from "./menu";
 import LoginRegisterModal from "./login-register-modal";
-import Menu from "@/app/_assets/images/menu.svg";
+import MenuIcon from "@/app/_assets/images/menu.svg";
 import ShoppingCart from "@/app/_assets/images/shopping-cart.svg";
-import Scale2 from "@/app/_assets/images/scale 2.svg";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -26,25 +25,32 @@ export default function Header() {
   const Router = useRouter();
   const Session = useSession();
 
-  console.log(Session);
+  const [ShowDesktopMenu, setShowDesktopMenu] = useState(false);
+  const [ShowMobileMenu, setShowMobileMenu] = useState(false);
 
   const [openAuthModal, setOpenAuthModal] = useState(false);
   return (
     <header className="fixed top-0 left-0 z-[20] w-full">
-      <nav className="bg-primary-dark relative w-full py-2">
-        <div className="container mx-auto">
+      <section className="bg-primary-dark relative z-10 w-full py-2">
+        <div className="container mx-auto px-3">
           <div className="flex items-center justify-between gap-1">
-            <div className="w-[30px] md:order-3 md:mr-5 md:w-[180px] md:flex-grow xl:flex-grow-0">
+            <div className="w-[100px] md:order-3 md:mr-5 md:w-[180px] md:flex-grow xl:flex-grow-0">
               {/* open mobile menu */}
-              <button className="btn-open-mobile-menu flex items-center gap-2 lg:hidden">
-                <Image width={30} src={Menu} alt="منو" />
+              <button
+                className="btn-open-mobile-menu flex items-center gap-2 xl:hidden"
+                onClick={() => setShowMobileMenu((pre) => !pre)}
+              >
+                <Image width={30} src={MenuIcon} alt="منو" />
                 <span className="hidden font-bold text-white md:block">
                   دسته بندی کالا ها
                 </span>
               </button>
               {/* open desktop menu  */}
-              <button className="btn-open-desktop-menu hidden items-center gap-2 lg:flex">
-                <Image width={30} src={Menu} alt="منو" />
+              <button
+                className="btn-open-desktop-menu hidden items-center gap-2 xl:flex"
+                onClick={() => setShowDesktopMenu((pre) => !pre)}
+              >
+                <Image width={30} src={MenuIcon} alt="منو" />
                 <span className="hidden font-bold text-white md:block">
                   دسته بندی کالا ها
                 </span>
@@ -77,27 +83,27 @@ export default function Header() {
               </ul>
             </div>
 
-            <div className="flex w-[70px] items-center gap-6 md:order-3 md:w-[250px]">
+            <div className="flex w-[90px] items-center justify-center gap-4 md:order-3 md:w-[250px]">
               <Link href="#">
                 <Image src={ShoppingCart} alt="shoping-card" width={30} />
               </Link>
-              <Link href="#">
-                <Image src={Scale2} alt="shoping-card" width={30} />
-              </Link>
+
               <button
                 disabled={!Session.data}
                 onClick={() => {
                   if (Session.status == "authenticated") Router.push("panel");
                   else setOpenAuthModal(true);
                 }}
-                className="hover:bg-primary-main hidden cursor-pointer items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex"
               >
                 {Session.status != "loading" ? (
-                  <span className="text-lg">
-                    {Session.data ? "ورود" : "حساب کاربری"}
-                  </span>
+                  <Image
+                    src={"/assets/images/profile-circle.svg"}
+                    width={30}
+                    height={30}
+                    alt=""
+                  />
                 ) : (
-                  <BeatLoader size={7} color="var(--color-primary-dark)" />
+                  <BeatLoader size={7} color="#fff" />
                 )}
               </button>
             </div>
@@ -105,8 +111,9 @@ export default function Header() {
         </div>
 
         <Search />
-        <MobileMenu />
-      </nav>
+      </section>
+      <MenuDesktop show={ShowDesktopMenu} setShow={setShowDesktopMenu} />
+      <MenuMobile show={ShowMobileMenu} setShow={setShowMobileMenu} />
       {Session.status == "unauthenticated" && openAuthModal && (
         <LoginRegisterModal {...{ setOpenAuthModal }} />
       )}

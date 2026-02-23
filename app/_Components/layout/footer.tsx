@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-20 lg:mt-0">
+      <div className="container mx-auto mt-20 px-4 lg:mt-0">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-7 lg:gap-10">
           <div className="lg:col-span-2">
             <h1 className="text-primary-main text-[40px] font-bold">
