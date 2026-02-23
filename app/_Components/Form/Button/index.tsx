@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
 type BTN = {
   size?: "small" | "main" | "larg";
@@ -6,7 +6,10 @@ type BTN = {
   customColor?: string;
   children: React.ReactNode;
   className?: string;
-} & HTMLAttributes<HTMLButtonElement>;
+} & DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
 
 export default function Button({
   size = "small",

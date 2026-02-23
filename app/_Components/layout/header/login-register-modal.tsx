@@ -1,18 +1,21 @@
 "use clint";
 import Image from "next/image";
-import { SetStateAction } from "react";
+import { SetStateAction, useState } from "react";
 import Button from "@/app/_Components/Form/Button/index";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
+import { BeatLoader } from "react-spinners";
 
 export default function LoginRegisterModal({
   setOpenAuthModal,
 }: {
   setOpenAuthModal: React.Dispatch<SetStateAction<boolean>>;
 }) {
+  const [loading, setLoading] = useState(false);
+
   const FormikPhone = useFormik({
     initialValues: { username: "", password: "" },
 
@@ -24,6 +27,7 @@ export default function LoginRegisterModal({
     validateOnBlur: false,
 
     async onSubmit(values, { validateForm }) {
+      setLoading(true);
       validateForm(values);
 
       const res = await signIn("credentials", {
@@ -39,6 +43,7 @@ export default function LoginRegisterModal({
       if (res?.ok) {
         toast.success("با موفقیت وارد شدید");
       }
+      setLoading(false);
     },
   });
 
@@ -111,8 +116,12 @@ export default function LoginRegisterModal({
                   {FormikPhone.errors.password}
                 </span>
 
-                <Button color="bg-primary-dark" className="mt-5 w-full">
-                  ورود
+                <Button
+                  color="bg-primary-dark"
+                  className="mt-5 w-full"
+                  disabled={loading}
+                >
+                  {loading ? <BeatLoader size={10} color="#fff" /> : "ورود"}
                 </Button>
               </form>
 

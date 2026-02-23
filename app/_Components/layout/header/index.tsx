@@ -10,6 +10,7 @@ import Scale2 from "@/app/_assets/images/scale 2.svg";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { BeatLoader } from "react-spinners";
 
 export default function Header() {
   const MoreLinks = [
@@ -23,8 +24,8 @@ export default function Header() {
     { label: "لوازم جانبی", href: "#" },
   ];
   const Router = useRouter();
-
   const Session = useSession();
+
   console.log(Session);
 
   const [openAuthModal, setOpenAuthModal] = useState(false);
@@ -84,16 +85,20 @@ export default function Header() {
                 <Image src={Scale2} alt="shoping-card" width={30} />
               </Link>
               <button
+                disabled={!Session.data}
                 onClick={() => {
                   if (Session.status == "authenticated") Router.push("panel");
                   else setOpenAuthModal(true);
                 }}
                 className="hover:bg-primary-main hidden cursor-pointer items-center rounded-md bg-white px-5 py-2 transition-all duration-300 hover:text-white md:flex"
               >
-                <i className="icon-user"></i>
-                <span className="text-lg">
-                  {Session.status == "unauthenticated" ? "ورود" : "حساب کاربری"}
-                </span>
+                {Session.status != "loading" ? (
+                  <span className="text-lg">
+                    {Session.data ? "ورود" : "حساب کاربری"}
+                  </span>
+                ) : (
+                  <BeatLoader size={7} color="var(--color-primary-dark)" />
+                )}
               </button>
             </div>
           </div>
